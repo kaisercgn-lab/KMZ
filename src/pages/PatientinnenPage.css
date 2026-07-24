@@ -1,0 +1,271 @@
+.page-header-section {
+  background: linear-gradient(135deg, hsl(218, 55%, 18%) 0%, hsl(186, 75%, 24%) 100%);
+  color: var(--white);
+  padding: 4rem 0 3rem 0;
+}
+
+.page-header-section .section-tag {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+
+.page-title {
+  color: var(--white);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.page-description {
+  color: var(--neutral-200);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+}
+
+.subpage-tabs {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab-btn:hover, .tab-btn.active {
+  background: var(--white);
+  color: var(--primary-900);
+  border-color: var(--white);
+}
+
+.gap-lg {
+  gap: 3rem;
+}
+
+.gap-md {
+  gap: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 4rem;
+}
+
+.text-body {
+  font-size: 1.05rem;
+  color: var(--neutral-700);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.fact-highlight-card {
+  background: var(--teal-50);
+  border-left: 4px solid var(--teal-600);
+  padding: 1.75rem;
+  border-radius: var(--radius-md);
+  margin-top: 1.5rem;
+}
+
+.fact-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--teal-700);
+  margin-bottom: 0.5rem;
+}
+
+.fact-highlight-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.fact-highlight-card p {
+  font-size: 0.95rem;
+  color: var(--neutral-700);
+  line-height: 1.55;
+}
+
+.stat-summary-card {
+  height: 100%;
+}
+
+.card-header-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.warning-box {
+  display: flex;
+  gap: 1rem;
+  background: var(--rose-50);
+  border: 1px solid var(--rose-100);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  margin-top: 1.25rem;
+}
+
+.warning-icon {
+  color: var(--rose-600);
+  flex-shrink: 0;
+}
+
+.warning-box strong {
+  color: var(--rose-600);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.warning-box p {
+  font-size: 0.88rem;
+  color: var(--neutral-700);
+}
+
+.solution-box {
+  display: flex;
+  gap: 1rem;
+  background: var(--teal-50);
+  border: 1px solid var(--teal-100);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+}
+
+.solution-icon {
+  color: var(--teal-600);
+  flex-shrink: 0;
+}
+
+.solution-box strong {
+  color: var(--teal-700);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.solution-box p {
+  font-size: 0.88rem;
+  color: var(--neutral-700);
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+/* Risk Card */
+.risk-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.risk-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--primary-100);
+  color: var(--primary-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.risk-icon-box.teal {
+  background: var(--teal-100);
+  color: var(--teal-700);
+}
+
+.risk-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.risk-card p {
+  font-size: 0.92rem;
+  color: var(--neutral-600);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.risk-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--teal-600);
+  margin-top: 1rem;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .span-2 {
+    grid-column: span 1;
+  }
+}
+
+/* Comparison Table */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-300);
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  text-align: left;
+}
+
+.comparison-table th, .comparison-table td {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--neutral-200);
+  font-size: 0.92rem;
+}
+
+.comparison-table th {
+  background: var(--neutral-100);
+  color: var(--primary-900);
+  font-weight: 700;
+}
+
+.comparison-table th.highlight-col, .comparison-table td.highlight-col {
+  background: var(--teal-50);
+  border-left: 2px solid var(--teal-500);
+  border-right: 2px solid var(--teal-500);
+}
+
+.icon-green { color: #16a34a; }
+.icon-red { color: #dc2626; }
+.color-teal { color: var(--teal-700); }
+.font-bold { font-weight: 700; }
+
+.patient-cta-card {
+  background: linear-gradient(135deg, var(--teal-50), var(--white));
+  border: 1.5px solid var(--teal-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2.5rem;
+}
+
+.patient-cta-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.patient-cta-card p {
+  color: var(--neutral-600);
+}

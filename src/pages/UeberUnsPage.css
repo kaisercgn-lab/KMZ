@@ -1,0 +1,87 @@
+.team-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.team-avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--teal-50);
+  border: 2px solid var(--teal-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+}
+
+.team-avatar-icon {
+  color: var(--teal-600);
+}
+
+.team-badge {
+  margin-bottom: 0.75rem;
+}
+
+.team-name {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--teal-700);
+  margin-bottom: 0.75rem;
+}
+
+.team-desc {
+  font-size: 0.9rem;
+  color: var(--neutral-600);
+  line-height: 1.5;
+}
+
+.network-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.network-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--primary-900);
+}
+
+.net-icon {
+  color: var(--teal-600);
+}
+
+.quality-box-card {
+  background: var(--primary-900);
+  color: var(--white);
+  padding: 3rem;
+  text-align: center;
+}
+
+.qual-award-icon {
+  color: var(--teal-500);
+  margin-bottom: 1.25rem;
+}
+
+.quality-box-card h3 {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.quality-box-card p {
+  color: var(--neutral-300);
+  font-size: 1rem;
+  line-height: 1.6;
+}

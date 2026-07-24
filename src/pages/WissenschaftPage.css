@@ -1,0 +1,141 @@
+.dark-gradient {
+  background: linear-gradient(135deg, hsl(218, 65%, 12%) 0%, hsl(218, 50%, 22%) 100%);
+}
+
+.study-highlight-card {
+  padding: 3rem;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border-left: 6px solid var(--teal-600);
+}
+
+.study-badge-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.award-icon {
+  color: var(--teal-600);
+}
+
+.study-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card-sub {
+  background: var(--neutral-50);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-200);
+}
+
+.card-sub h4 {
+  font-size: 1rem;
+  color: var(--primary-900);
+  margin-bottom: 0.4rem;
+}
+
+.card-sub p {
+  font-size: 0.88rem;
+  color: var(--neutral-600);
+  line-height: 1.45;
+}
+
+/* Literature Database */
+.section-header-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input-box {
+  position: relative;
+  min-width: 280px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--neutral-500);
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--neutral-300);
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  border-color: var(--teal-600);
+}
+
+.category-select {
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--neutral-300);
+  outline: none;
+  font-size: 0.9rem;
+  background: var(--white);
+}
+
+.literature-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lit-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+}
+
+.lit-id {
+  font-weight: 800;
+  color: var(--teal-700);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.lit-content {
+  flex: 1;
+}
+
+.lit-authors {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary-900);
+  margin-bottom: 0.2rem;
+}
+
+.lit-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--neutral-800);
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+.lit-journal {
+  font-size: 0.85rem;
+  color: var(--neutral-600);
+  font-style: italic;
+}

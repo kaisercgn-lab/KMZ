@@ -1,0 +1,77 @@
+.primary-gradient {
+  background: linear-gradient(135deg, var(--primary-900) 0%, hsl(218, 50%, 25%) 100%);
+}
+
+.indication-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.indication-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--neutral-50);
+  padding: 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-200);
+}
+
+.indication-icon {
+  color: var(--teal-600);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.referral-card {
+  padding: 2.5rem;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+}
+
+.referral-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-feature {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.feature-icon {
+  color: var(--teal-600);
+  flex-shrink: 0;
+}
+
+.doctor-hotline-box {
+  background: var(--teal-50);
+  border: 1px solid var(--teal-100);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+}
+
+.doctor-hotline-box h4 {
+  font-size: 1.1rem;
+  color: var(--teal-700);
+  margin-bottom: 0.25rem;
+}
+
+.hotline-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hotline-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--primary-900);
+}

@@ -18,7 +18,7 @@ export const ImpressumPage: React.FC = () => {
         <div className="card p-5" style={{ maxWidth: '840px', margin: '0 auto' }}>
           <h2>Angaben gemäß § 5 TMG</h2>
           <p className="mt-2">
-            <strong>KMZ – Kölner MRT-Zentrum für Brustkrebsvorsorge</strong><br />
+            <strong>KMZ – Kaiser MR-Mammographie Zentrum</strong><br />
             Leitung: Prof. Dr. med. Clemens Kaiser<br />
             Hauptstandort Diagnostik<br />
             50667 Köln

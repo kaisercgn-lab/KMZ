@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <span className="footer-logo-title">KMZ</span>
-                <span className="footer-logo-sub">Kölner MRT-Zentrum</span>
+                <span className="footer-logo-sub">Kaiser MR-Mammographie Zentrum</span>
               </div>
             </Link>
             <p className="footer-desc">
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
             <ul className="contact-list">
               <li>
                 <MapPin size={18} className="contact-icon" />
-                <span>KMZ – Kölner MRT-Zentrum<br />Hauptstandort Köln / Diagnostik<br />50667 Köln</span>
+                <span>KMZ – Kaiser MR-Mammographie Zentrum<br />Hauptstandort Köln / Diagnostik<br />50667 Köln</span>
               </li>
               <li>
                 <Phone size={18} className="contact-icon" />
@@ -86,7 +86,7 @@ export const Footer: React.FC = () => {
 
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <p>© {new Date().getFullYear()} KMZ – Kölner MRT-Zentrum für Brustkrebsvorsorge. Alle Rechte vorbehalten.</p>
+          <p>© {new Date().getFullYear()} KMZ – Kaiser MR-Mammographie Zentrum. Alle Rechte vorbehalten.</p>
           <div className="legal-links">
             <Link to="/impressum">Impressum</Link>
             <span className="dot">•</span>

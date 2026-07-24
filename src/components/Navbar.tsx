@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="logo-text-box">
               <span className="logo-title">KMZ</span>
-              <span className="logo-subtitle">Kölner MRT-Zentrum für Brustkrebsvorsorge</span>
+              <span className="logo-subtitle">Kaiser MR-Mammographie Zentrum</span>
             </div>
           </Link>
 
@@ -88,7 +88,7 @@ export const Navbar: React.FC = () => {
               <HeartPulse className="logo-icon" size={24} />
               <div className="logo-text-box">
                 <span className="logo-title">KMZ</span>
-                <span className="logo-subtitle">Kölner MRT-Zentrum</span>
+                <span className="logo-subtitle">Kaiser MR-Mammographie Zentrum</span>
               </div>
             </Link>
             <button className="drawer-close" onClick={() => setMobileMenuOpen(false)}>

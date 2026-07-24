@@ -28,7 +28,7 @@ export const HomePage: React.FC = () => {
               <span>Hochspezialisierte Früherkennung</span>
             </div>
             <h1 className="hero-title">
-              KMZ – Kölner MRT-Zentrum für <span className="highlight-teal">Brustkrebsvorsorge</span>
+              KMZ – Kaiser MR-Mammographie <span className="highlight-teal">Zentrum</span>
             </h1>
             <p className="hero-text">
               Im Mittelpunkt unserer Arbeit steht die strahlenfreie Mamma-MRT. Höchste Präzision zur Entdeckung von Karzinomen im frühesten, heilbaren Stadium – insbesondere bei dichtem Brustdrüsengewebe.
@@ -100,7 +100,7 @@ export const HomePage: React.FC = () => {
                 <div className="doctor-info">
                   <h3>Prof. Dr. med. Clemens Kaiser</h3>
                   <p className="doctor-role">Sektionsleiter Mammadiagnostik</p>
-                  <p className="doctor-inst">Leiter Kölner MRT-Zentrum für Brustkrebsvorsorge</p>
+                  <p className="doctor-inst">Leiter Kaiser MR-Mammographie Zentrum (KMZ)</p>
                   <span className="badge badge-teal mt-2">Interdisziplinäres Brustzentrum</span>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export const HomePage: React.FC = () => {
                 Sicherheit und Präzision in der Brustkrebsfrüherkennung
               </h2>
               <p className="welcome-paragraph">
-                Herzlich willkommen im <strong>Kölner MRT-Zentrum für Brustkrebsvorsorge (KMZ)</strong>. Im Mittelpunkt unserer Arbeit steht der gezielte Einsatz der <strong>Mamma-MRT</strong> in der Brustkrebsvorsorge, weil wir damit frühzeitig und zuverlässig Brustkrebs erkennen können.
+                Herzlich willkommen im <strong>Kaiser MR-Mammographie Zentrum (KMZ)</strong>. Im Mittelpunkt unserer Arbeit steht der gezielte Einsatz der <strong>Mamma-MRT</strong> in der Brustkrebsvorsorge, weil wir damit frühzeitig und zuverlässig Brustkrebs erkennen können.
               </p>
               <p className="welcome-paragraph">
                 Je früher wir ein Karzinom entdecken, desto größer sind die Heilungschancen. Das ist bedeutsam, denn Brustkrebs ist nach wie vor die häufigste krebsbedingte Todesursache der Frau.
@@ -224,7 +224,7 @@ export const HomePage: React.FC = () => {
                 <Newspaper size={16} />
                 <span>Aktuelles</span>
               </div>
-              <h2 className="section-title">Neues aus dem Kölner MRT-Zentrum</h2>
+              <h2 className="section-title">Neues aus dem Kaiser MR-Mammographie Zentrum</h2>
             </div>
             <Link to="/news" className="btn btn-outline">
               <span>Alle News anzeigen</span>

@@ -32,7 +32,7 @@ export const UeberUnsPage: React.FC = () => {
             <Users size={16} />
             <span>Über uns & Qualitätsversprechen</span>
           </div>
-          <h1 className="page-title">Das Kölner MRT-Zentrum für Brustkrebsvorsorge</h1>
+          <h1 className="page-title">Das Kaiser MR-Mammographie Zentrum (KMZ)</h1>
           <p className="page-description">
             Wir verbinden Spitzenmedizin, empathische Patientinnenbetreuung und wissenschaftliche Exzellenz für Ihre maximale Gesundheitssicherheit.
           </p>

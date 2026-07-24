@@ -32,7 +32,7 @@ export const KontaktPage: React.FC = () => {
                 <MapPin className="detail-icon" size={24} />
                 <div>
                   <strong>Adresse & Anreise</strong>
-                  <p>KMZ – Kölner MRT-Zentrum für Brustkrebsvorsorge<br />Hauptstandort Diagnostik<br />50667 Köln</p>
+                  <p>KMZ – Kaiser MR-Mammographie Zentrum<br />Hauptstandort Diagnostik<br />50667 Köln</p>
                 </div>
               </div>
 

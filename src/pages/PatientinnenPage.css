@@ -269,3 +269,47 @@
 .patient-cta-card p {
   color: var(--neutral-600);
 }
+
+/* TK Banner Card */
+.tk-banner-card {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, #1c4548 100%);
+  color: var(--white);
+  padding: 2.25rem 2.5rem;
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tk-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: fit-content;
+}
+
+.tk-banner-body h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--white);
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.tk-banner-body p {
+  color: var(--sand);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 850px;
+}
+
+.tk-banner-action {
+  margin-top: 0.5rem;
+}

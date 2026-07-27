@@ -225,6 +225,28 @@ export const PatientinnenPage: React.FC = () => {
         )}
       </div>
 
+      {/* Techniker Krankenkasse (TK) Special Feature Box */}
+      <section className="container mb-5">
+        <div className="card tk-banner-card">
+          <div className="tk-banner-badge">
+            <Shield size={20} />
+            <span>Kostenübernahme für TK-Kundinnen</span>
+          </div>
+          <div className="tk-banner-body">
+            <h3>Sind Sie bei der Techniker Krankenkasse (TK) versichert?</h3>
+            <p>
+              Im Rahmen unseres <strong>Besonderen Versorgungsangebots (Selektivvertrag)</strong> steht versicherten Frauen der Techniker Krankenkasse eine vollumfängliche Kostenübernahme der Mamma-MRT Früherkennung bei entsprechend dichtem Brustdrüsengewebe oder erhöhtem Risiko zu.
+            </p>
+          </div>
+          <div className="tk-banner-action">
+            <Link to="/terminanfrage" className="btn btn-rose">
+              <Calendar size={18} />
+              <span>TK-Terminanfrage starten</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Box */}
       <section className="container mb-5">
         <div className="card patient-cta-card">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Calendar, Menu, X, HeartPulse, ChevronRight, PhoneCall } from 'lucide-react';
+import { Calendar, Menu, X, HeartPulse, ChevronRight, PhoneCall, ShieldCheck, Clock } from 'lucide-react';
 import './Navbar.css';
 
 export const Navbar: React.FC = () => {
@@ -20,18 +20,42 @@ export const Navbar: React.FC = () => {
     setMobileMenuOpen(false);
   }, [location]);
 
-  const navLinks = [
+  // Clean structured main navigation
+  const primaryNavLinks = [
     { label: 'Für Patientinnen', path: '/brustkrebsvorsorge' },
     { label: 'Mamma-MRT', path: '/MR-Mammographie' },
     { label: 'Für Gynäkolog:innen', path: '/fuer-gynaekolog-innen' },
-    { label: 'Wissenschaft & Forschung', path: '/wissenschaft-forschung' },
+    { label: 'Wissenschaft', path: '/wissenschaft-forschung' },
     { label: 'Über uns', path: '/ueber-uns' },
-    { label: 'News', path: '/news' },
-    { label: 'FAQ', path: '/faqs' },
   ];
 
   return (
     <>
+      {/* Top Header Utility Bar */}
+      <div className="top-utility-bar">
+        <div className="container top-utility-container">
+          <div className="top-utility-left">
+            <span className="tk-badge-top">
+              <ShieldCheck size={14} />
+              TK-Vertragspartner: Mamma-MRT Kostenübernahme möglich
+            </span>
+            <span className="top-divider">|</span>
+            <span className="top-info-item">
+              <Clock size={13} />
+              Mo – Fr: 08:00 – 17:00 Uhr
+            </span>
+          </div>
+
+          <div className="top-utility-right">
+            <a href="tel:02211234567" className="top-phone-link">
+              <PhoneCall size={13} />
+              <span>Praxistelefon: 0221 / 123 45 67</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navbar Header */}
       <header className={`navbar-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-container">
           <Link to="/" className="navbar-logo">
@@ -46,7 +70,7 @@ export const Navbar: React.FC = () => {
 
           <nav className="navbar-nav">
             <ul className="nav-list">
-              {navLinks.map((link) => {
+              {primaryNavLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
                   <li key={link.path} className="nav-item">
@@ -95,8 +119,14 @@ export const Navbar: React.FC = () => {
               <X size={24} />
             </button>
           </div>
+
+          <div className="drawer-tk-callout">
+            <ShieldCheck size={16} />
+            <span>TK-Kundinnen: Direct Terminierung & Kostenübernahme</span>
+          </div>
+
           <ul className="mobile-nav-list">
-            {navLinks.map((link) => (
+            {primaryNavLinks.map((link) => (
               <li key={link.path}>
                 <Link
                   to={link.path}
@@ -108,11 +138,32 @@ export const Navbar: React.FC = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                to="/news"
+                className={`mobile-nav-link ${location.pathname === '/news' ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Aktuelles & News</span>
+                <ChevronRight size={18} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/faqs"
+                className={`mobile-nav-link ${location.pathname === '/faqs' ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>FAQ & Häufige Fragen</span>
+                <ChevronRight size={18} />
+              </Link>
+            </li>
           </ul>
+
           <div className="drawer-footer">
             <Link to="/terminanfrage" className="btn btn-primary btn-full">
               <Calendar size={18} />
-              <span>Termin online anfragen</span>
+              <span>Termin online anfragen (auch TK)</span>
             </Link>
             <Link to="/kontakt" className="btn btn-outline btn-full">
               <PhoneCall size={18} />

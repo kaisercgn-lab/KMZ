@@ -5,32 +5,60 @@ import {
   AlertTriangle,
   CheckCircle,
   XCircle,
-  HelpCircle,
   Calendar,
   Shield,
   Dna,
   Layers,
   Activity,
   User,
-  ArrowRight
+  ChevronDown,
+  Sparkles,
+  Music,
+  Smile,
+  Clock,
+  ShieldCheck
 } from 'lucide-react';
 import './PatientinnenPage.css';
 
 export const PatientinnenPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'fakten' | 'risiko' | 'vergleich'>('fakten');
+  const [activeTab, setActiveTab] = useState<'fakten' | 'brustdichte' | 'risiko' | 'vergleich'>('fakten');
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const patientFaqs = [
+    {
+      q: "Brauche ich eine Überweisung für die Mamma-MRT?",
+      a: "Für gesetzlich versicherte Patientinnen (z. B. im Rahmen des TK-Selektivvertrags) ist eine Zuweisung/Empfehlung durch Ihre Gynäkologin oder Ihren Gynäkologen erforderlich. Privatversicherte und Selbstzahlerinnen können den Termin direkt buchen."
+    },
+    {
+      q: "Wann ist der beste Zeitpunkt im Monat für die Untersuchung?",
+      a: "Bei Frauen im gebärfähigen Alter sollte die Untersuchung vorzugsweise zwischen dem 7. und 14. Tag des Menstruationszyklus stattfinden, da das Brustgewebe in dieser Phase den geringsten hormonellen Hintergrundkontrast aufweist."
+    },
+    {
+      q: "Ist das Kontrastmittel bei der Mamma-MRT sicher?",
+      a: "Ja. Das verwendete Gadolinium-haltige Kontrastmittel wird seit Jahrzehnten weltweit eingesetzt und zeichnet sich durch eine sehr hohe Verträglichkeit aus. Es wird nach der Untersuchung schnell über die Nieren ausgeschieden."
+    },
+    {
+      q: "Ist die Untersuchung schmerzhaft oder eng?",
+      a: "Nein. Die Untersuchung erfolgt in bequemer Bauchlage und ist völlig schmerzfrei. Es findet kein schmerzhaftes Zusammenpressen der Brust wie bei der Röntgen-Mammographie statt. Zudem sorgen moderne 3-Tesla-Geräte mit breitem Tunnel und angenehmer Beleuchtung für maximalen Komfort."
+    }
+  ];
 
   return (
     <div className="patientinnen-page">
       {/* Subpage Header */}
-      <section className="page-header-section">
+      <section className="page-header-section teal-gradient">
         <div className="container">
           <div className="section-tag">
             <Heart size={16} />
             <span>Für Patientinnen</span>
           </div>
-          <h1 className="page-title">Brustkrebsvorsorge & Früherkennung</h1>
+          <h1 className="page-title">Brustkrebsvorsorge &amp; Früherkennung</h1>
           <p className="page-description">
-            Fundierte Informationen zu Risikofaktoren, Brustgewebedichte und modernen Untersuchungsmethoden für Ihre Gesundheit und persönliche Sicherheit.
+            Verlässliche Informationen zu Risikofaktoren, Gewebedichte und modernster Mamma-MRT Diagnostik – für Ihre Sicherheit und ein gutes Gefühl.
           </p>
 
           <div className="subpage-tabs">
@@ -38,7 +66,13 @@ export const PatientinnenPage: React.FC = () => {
               className={`tab-btn ${activeTab === 'fakten' ? 'active' : ''}`}
               onClick={() => setActiveTab('fakten')}
             >
-              Fakten zu Brustkrebs
+              Fakten &amp; Früherkennung
+            </button>
+            <button
+              className={`tab-btn ${activeTab === 'brustdichte' ? 'active' : ''}`}
+              onClick={() => setActiveTab('brustdichte')}
+            >
+              Brustgewebedichte (ACR A-D)
             </button>
             <button
               className={`tab-btn ${activeTab === 'risiko' ? 'active' : ''}`}
@@ -61,39 +95,41 @@ export const PatientinnenPage: React.FC = () => {
         {/* Tab 1: Fakten */}
         {activeTab === 'fakten' && (
           <div className="tab-content animate-fade-in">
-            <div className="grid-2 gap-lg">
+            <div className="grid-2 gap-lg align-start">
               <div className="content-block">
-                <h2 className="section-title">Wichtige Fakten zu Brustkrebs in Deutschland</h2>
+                <h2 className="section-title">Wichtige Fakten zur Früherkennung in Deutschland</h2>
                 <p className="text-body">
-                  Brustkrebs betrifft viele Frauen in Deutschland und weltweit. Nach aktuellen Zahlen des Robert-Koch-Instituts erkranken jährlich in Deutschland rund <strong>70.000 Frauen</strong> an Brustkrebs. Im Laufe ihres Lebens trifft die Diagnose statistisch <strong>jede 8. Frau</strong>.
+                  Brustkrebs ist in Deutschland die häufigste Krebserkrankung bei Frauen. Laut Robert-Koch-Institut erkranken jährlich rund <strong>70.000 Frauen</strong>. Statisch gesehen ist im Laufe des Lebens <strong>jede 8. Frau</strong> betroffen.
                 </p>
                 <p className="text-body">
-                  Jährlich sterben ca. 20.000 Frauen an den Folgen der Erkrankung. Leider sind zunehmend auch jüngere Frauen unter 40 Jahren betroffen.
+                  Die entscheidende Nachricht der modernen Medizin: <strong>Früh erkannt ist Brustkrebs in den allermeisten Fällen heilbar!</strong>
                 </p>
 
                 <div className="fact-highlight-card">
                   <div className="fact-badge">
-                    <span>Prognose-Faktor</span>
+                    <Sparkles size={14} className="mr-1 inline" />
+                    Prognose-Vorteil
                   </div>
-                  <h3>Warum die Tumorgröße unter 1 cm entscheidend ist</h3>
+                  <h3>Warum die Tumorentdeckung unter 1 cm lebensrettend ist</h3>
                   <p>
-                    Wird ein Karzinom in der Brust in einem Stadium unter 1 cm entdeckt, liegt die <strong>12-Jahres-Überlebensrate bei über 90%</strong> – unabhängig vom Aggressivitätsgrad des Tumors. In diesem Frühstadium empfiehlt die S3-Leitlinie in der Regel noch keine Chemotherapie, da Metastasen äußerst unwahrscheinlich sind.
+                    Wird ein Tumor entdeckt, solange er kleiner als 1 cm ist, liegt die <strong>12-Jahres-Überlebensrate bei über 90 %</strong>. In diesem frühen Stadium haben sich meist noch keine Tochterabsiedlungen (Metastasen) gebildet, weshalb Patientinnen oft eine belastende Chemotherapie erspart werden kann.
                   </p>
                 </div>
               </div>
 
               <div className="content-block">
                 <div className="card stat-summary-card">
-                  <h3 className="card-header-title">Warum herkömmliches Screening oft Grenzen hat</h3>
+                  <h3 className="card-header-title">Grenzen herkömmlicher Röntgendiagnostik</h3>
                   <p className="text-body">
-                    Im konventionellen Mammographie-Screening wird Röntgendiagnostik eingesetzt. Bei Frauen mit <strong>dichtem Brustdrüsengewebe (ACR Kategorie C & D)</strong> stellt sich Drüsengewebe auf dem Röntgenbild weiß dar – ebenso wie mögliche Karzinome.
+                    Im traditionellen Röntgen-Screening stellt sich dichte Brustdrüse weiß dar. Da sich auch Tumorgewebe im Röntgenbild weiß abbildet, entsteht bei dichter Brust der sogenannte <strong>„Schneeball im Verschneiten“-Effekt</strong>.
                   </p>
+                  
                   <div className="warning-box">
                     <AlertTriangle size={24} className="warning-icon" />
                     <div>
-                      <strong>Über 50% unentdeckte Befunde bei dichtem Gewebe</strong>
+                      <strong>Bis zu 50 % unentdeckte Befunde im Röntgenbild</strong>
                       <p>
-                        In der Literatur ist belegt, dass bei hoher Brustdichte über die Hälfte der Mammakarzinome im reinen Mammographie-Röntgenbild übersehen werden können.
+                        Bei hoher Brustdichte (ACR C &amp; D) verliert die Röntgen-Mammographie an Treffsicherheit. Über die Hälfte kleiner Tumore können übersehen werden.
                       </p>
                     </div>
                   </div>
@@ -103,7 +139,7 @@ export const PatientinnenPage: React.FC = () => {
                     <div>
                       <strong>Die Mamma-MRT Lösung im KMZ</strong>
                       <p>
-                        Die Mamma-MRT arbeitet ohne Strahlung und macht Gewebeveränderungen unabhängig von der Brustdichte hochpräzise sichtbar.
+                        Die Mamma-MRT arbeitet ohne Röntgenstrahlung mit Magnetfeldern. Sie erkennt Durchblutungsveränderungen und macht Gewebeveränderungen unabhängig von der Brustdichte zu über 95 % sichtbar.
                       </p>
                     </div>
                   </div>
@@ -113,18 +149,66 @@ export const PatientinnenPage: React.FC = () => {
           </div>
         )}
 
-        {/* Tab 2: Risikofaktoren */}
+        {/* Tab 2: Brustgewebedichte (ACR A-D) */}
+        {activeTab === 'brustdichte' && (
+          <div className="tab-content animate-fade-in">
+            <div className="text-center mb-5 max-w-700 m-auto">
+              <h2 className="section-title">Brustgewebedichte (ACR Categories)</h2>
+              <p className="text-body">
+                Die Brustdichte beschreibt das Verhältnis von Fettgewebe zu Drüsen- und Bindegewebe. Fast 50 % aller Frauen im screening-relevanten Alter haben dichtes Brustgewebe (ACR C oder D).
+              </p>
+            </div>
+
+            <div className="grid-4 gap-md">
+              <div className="acr-card">
+                <div className="acr-badge acr-a">ACR Typ A</div>
+                <h4>Fast rein fettreich</h4>
+                <p>Das Drüsengewebe ist minimal (&lt; 25 %). Röntgen-Mammographie bietet hier eine gute Beurteilbarkeit.</p>
+              </div>
+
+              <div className="acr-card">
+                <div className="acr-badge acr-b">ACR Typ B</div>
+                <h4>Fettgewebe mit Drüseninseln</h4>
+                <p>Vereinzelte drüsige Gewebedichten (25–50 %). Gute bis mäßige Sichtbarkeit im Röntgenbild.</p>
+              </div>
+
+              <div className="acr-card highlight-density">
+                <div className="acr-badge acr-c">ACR Typ C</div>
+                <h4>Heterogen dicht</h4>
+                <p>Hoher Drüsenanteil (50–75 %). Befunde können im Röntgenbild maskiert werden. <strong>MRT dringend empfohlen.</strong></p>
+              </div>
+
+              <div className="acr-card highlight-density">
+                <div className="acr-badge acr-d">ACR Typ D</div>
+                <h4>Extrem dicht</h4>
+                <p>Sehr hohes Eigenrisiko (&gt; 75 % Drüsengewebe). Röntgen-Mammographie stark eingeschränkt. <strong>Empfehlung: Mamma-MRT.</strong></p>
+              </div>
+            </div>
+
+            <div className="density-callout-box mt-4">
+              <ShieldCheck size={28} className="text-teal" />
+              <div>
+                <h4>TK-Selektivvertrag deckt Mamma-MRT bei Dichte Typ C &amp; D ab</h4>
+                <p>
+                  Versicherte der Techniker Krankenkasse mit nachgewiesenem dichten Gewebe (ACR C oder D) erhalten die Mamma-MRT im KMZ zu 100 % als Kassenleistung erstattet.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Tab 3: Risikofaktoren */}
         {activeTab === 'risiko' && (
           <div className="tab-content animate-fade-in">
-            <h2 className="section-title text-center mb-4">Zentrale Risikofaktoren im Überblick</h2>
+            <h2 className="section-title text-center mb-4">Persönliche Risikofaktoren im Überblick</h2>
             <div className="grid-3 gap-md">
               <div className="card risk-card">
                 <div className="risk-icon-box">
                   <Dna size={26} />
                 </div>
-                <h3>1. Vererbung & Familiäre Faktoren</h3>
+                <h3>1. Familiäre &amp; Genetische Vorbelastung</h3>
                 <p>
-                  Genetische Veränderungen (wie BRCA1/2) oder gehäuftes Auftreten von Brust-/Eierstockkrebs in der Familie steigern das Risiko erheblich. Eine humangenetische Beratung gibt Aufschluss.
+                  Nachgewiesene Genmutationen (z. B. BRCA1/2) oder gehäuftes Auftreten von Brust- oder Eierstockkrebs in der Familie erhöhen das Erkrankungsrisiko deutlich.
                 </p>
               </div>
 
@@ -132,22 +216,19 @@ export const PatientinnenPage: React.FC = () => {
                 <div className="risk-icon-box">
                   <Layers size={26} />
                 </div>
-                <h3>2. Dichtes Brustdrüsengewebe</h3>
+                <h3>2. Hohe Gewebedichte (ACR C &amp; D)</h3>
                 <p>
-                  Knapp 50% der Frauen im Screening-Alter haben dichtes Drüsengewebe (ACR C & D). Frauen mit Kategorie D besitzen ein 4- bis 6-fach erhöhtes Krebsrisiko gegenüber Gewebetyp A.
+                  Frauen mit sehr dichtem Drüsengewebe tragen ein 4- bis 6-fach erhöhtes Krebsrisiko im Vergleich zu fettreichem Gewebe und benötigen präzisere Diagnostik.
                 </p>
-                <Link to="/MR-Mammographie#dichte" className="risk-link">
-                  Mehr zur Brustdichte &rarr;
-                </Link>
               </div>
 
               <div className="card risk-card">
                 <div className="risk-icon-box">
                   <Activity size={26} />
                 </div>
-                <h3>3. Hormonelle Faktoren</h3>
+                <h3>3. Hormonelle Stimulation</h3>
                 <p>
-                  Frühe erste Regelblutung, späte Wechseljahre, Langzeiteinnahme von Hormonersatztherapien oder Verhütungsmitteln haben Einfluss auf die hormonelle Stimulation des Drüsengewebes.
+                  Frühe erste Menstruation, späte Menopause oder langfristige Hormonersatztherapien verlängern die hormonelle Einwirkung auf das Brustgewebe.
                 </p>
               </div>
 
@@ -157,7 +238,7 @@ export const PatientinnenPage: React.FC = () => {
                 </div>
                 <h3>4. Lebensalter</h3>
                 <p>
-                  Das statistische Risiko steigt mit zunehmendem Alter: Mit 45 Jahren liegt das 10-Jahres-Risiko bei 1 von 48 Frauen, mit 55 Jahren bei 1 von 37 Frauen (Quelle: DKFZ).
+                  Das Risiko steigt kontinuierlich ab dem 40. Lebensjahr an. Mit 50 Jahren liegt das 10-Jahres-Risiko bei ca. 1 von 37 Frauen (Quelle: DKFZ).
                 </p>
               </div>
 
@@ -165,16 +246,16 @@ export const PatientinnenPage: React.FC = () => {
                 <div className="risk-icon-box teal">
                   <Shield size={26} />
                 </div>
-                <h3>5. Lebensstil & Prävention</h3>
+                <h3>5. Lebensstil &amp; Individuelle Prävention</h3>
                 <p>
-                  Regelmäßige Bewegung, ausgewogene Ernährung, Reduktion von Alkoholkonsum und Verzicht auf Rauchen tragen zur Vorbeugung bei. Genauso wichtig ist die Wahl der richtigen Untersuchungsmethode für Ihren individuellen Gewebetyp.
+                  Ausgewogene Ernährung, Bewegung und Verzicht auf Rauchen senken das Risiko. Ergänzend sorgt die Wahl der optimalen Untersuchungsmethode für beruhigende Klarheit.
                 </p>
               </div>
             </div>
           </div>
         )}
 
-        {/* Tab 3: Vergleich der Untersuchungsmethoden */}
+        {/* Tab 4: Vergleich der Untersuchungsmethoden */}
         {activeTab === 'vergleich' && (
           <div className="tab-content animate-fade-in">
             <h2 className="section-title text-center mb-4">Vergleich der Untersuchungsmethoden</h2>
@@ -182,41 +263,41 @@ export const PatientinnenPage: React.FC = () => {
               <table className="comparison-table">
                 <thead>
                   <tr>
-                    <th>Eigenschaft / Methode</th>
+                    <th>Kriterium / Eigenschaft</th>
                     <th>Selbstabtastung</th>
-                    <th>Mammasonographie (Ultraschall)</th>
+                    <th>Ultraschall (Sonographie)</th>
                     <th>Röntgen-Mammographie</th>
                     <th className="highlight-col">Mamma-MRT (KMZ)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><strong>Sensitivität bei dichter Brust (ACR C/D)</strong></td>
+                    <td><strong>Sensitivität bei dichtem Gewebe (ACR C/D)</strong></td>
                     <td>Sehr gering</td>
-                    <td>Mittel (ca. 50-60%)</td>
-                    <td>Gering (&lt; 50%)</td>
-                    <td className="highlight-col font-bold color-teal">&gt; 95% (Höchste)</td>
+                    <td>Mittel (50–60 %)</td>
+                    <td>Gering (&lt; 50 %)</td>
+                    <td className="highlight-col font-bold color-teal">&gt; 95 % (Höchste Treffsicherheit)</td>
                   </tr>
                   <tr>
                     <td><strong>Strahlenbelastung</strong></td>
                     <td><CheckCircle size={18} className="icon-green" /> Keine</td>
                     <td><CheckCircle size={18} className="icon-green" /> Keine</td>
                     <td><XCircle size={18} className="icon-red" /> Röntgenstrahlung</td>
-                    <td className="highlight-col"><CheckCircle size={18} className="icon-green" /> Keine (Magnetfeld)</td>
+                    <td className="highlight-col"><CheckCircle size={18} className="icon-green" /> Keine (Schonendes Magnetfeld)</td>
                   </tr>
                   <tr>
-                    <td><strong>Erkennung von Tumoren &lt; 1 cm</strong></td>
+                    <td><strong>Früherkennung &lt; 1 cm Tumore</strong></td>
                     <td>Sehr selten</td>
                     <td>Eingeschränkt</td>
-                    <td>Teils überlagert</td>
-                    <td className="highlight-col font-bold color-teal"><CheckCircle size={18} className="icon-green" /> Zuverlässigst</td>
+                    <td>Möglichst überlagert</td>
+                    <td className="highlight-col font-bold color-teal"><CheckCircle size={18} className="icon-green" /> Höchste Zuverlässigkeit</td>
                   </tr>
                   <tr>
-                    <td><strong>Gewebedichte-Abhängigkeit</strong></td>
-                    <td>Stark abhängig</td>
-                    <td>Mäßig abhängig</td>
-                    <td>Stark eingeschränkt</td>
-                    <td className="highlight-col"><CheckCircle size={18} className="icon-green" /> Unabhängig</td>
+                    <td><strong>Schmerzhaltes Zusammenpressen</strong></td>
+                    <td>Nein</td>
+                    <td>Nein</td>
+                    <td>Ja (Druckbelastung)</td>
+                    <td className="highlight-col"><CheckCircle size={18} className="icon-green" /> Nein (Bequeme Bauchlage)</td>
                   </tr>
                 </tbody>
               </table>
@@ -225,34 +306,96 @@ export const PatientinnenPage: React.FC = () => {
         )}
       </div>
 
-      {/* Techniker Krankenkasse (TK) Special Feature Box */}
-      <section className="container mb-5">
+      {/* Comfort & Empathy Section */}
+      <section className="comfort-section bg-stone">
+        <div className="container">
+          <div className="text-center mb-5 max-w-700 m-auto">
+            <span className="badge badge-teal p-2 px-3 mb-2 inline-block">
+              <Smile size={16} className="mr-1 inline" />
+              Ihr Wohlbefinden steht an erster Stelle
+            </span>
+            <h2 className="section-title">Angstfreie &amp; komfortable Untersuchung im KMZ</h2>
+            <p className="text-body">
+              Wir verstehen, dass medizinische Untersuchungen mit Sorgen verbunden sein können. Deshalb haben wir den Ablauf für Sie so entspannt wie möglich gestaltet.
+            </p>
+          </div>
+
+          <div className="grid-3 gap-md">
+            <div className="comfort-card">
+              <div className="comfort-icon"><Smile size={24} /></div>
+              <h4>Kein Schmerzvoller Druck</h4>
+              <p>Sie liegen entspannt auf einer speziell geformten, weichen Liege in Bauchlage. Ihre Brust wird nicht gequetscht.</p>
+            </div>
+
+            <div className="comfort-card">
+              <div className="comfort-icon"><Music size={24} /></div>
+              <h4>Wunschmusik &amp; Kopfhörer</h4>
+              <p>Genießen Sie Ihre Lieblingsmusik während der Untersuchung über Spezial-Kopfhörer zur Geräuschreduktion.</p>
+            </div>
+
+            <div className="comfort-card">
+              <div className="comfort-icon"><Clock size={24} /></div>
+              <h4>Schnelle Befundbesprechung</h4>
+              <p>Kein tagelanges Zittern. Nach der Untersuchung erklärt Ihnen unser Spezialistenteam das Ergebnis auf Wunsch direkt.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TK Special Feature Box */}
+      <section className="container section-padding">
         <div className="card tk-banner-card">
           <div className="tk-banner-badge">
-            <Shield size={20} />
+            <Shield size={18} />
             <span>Kostenübernahme für TK-Kundinnen</span>
           </div>
           <div className="tk-banner-body">
             <h3>Sind Sie bei der Techniker Krankenkasse (TK) versichert?</h3>
             <p>
-              Im Rahmen unseres <strong>Besonderen Versorgungsangebots (Selektivvertrag)</strong> steht versicherten Frauen der Techniker Krankenkasse eine vollumfängliche Kostenübernahme der Mamma-MRT Früherkennung bei entsprechend dichtem Brustdrüsengewebe oder erhöhtem Risiko zu.
+              Im Rahmen unseres <strong>Besonderen Versorgungsangebots (Selektivvertrag)</strong> mit der Techniker Krankenkasse steht Ihnen bei dichtem Brustdrüsengewebe (ACR C/D) oder familiärem Risiko die <strong>100 % kostenfreie Mamma-MRT</strong> zu.
             </p>
           </div>
           <div className="tk-banner-action">
             <Link to="/terminanfrage" className="btn btn-rose">
               <Calendar size={18} />
-              <span>TK-Terminanfrage starten</span>
+              <span>TK-Termin online anfragen</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Box */}
+      {/* Patient FAQ Accordion Section */}
+      <section className="container mb-5">
+        <div className="max-w-800 m-auto">
+          <h2 className="section-title text-center mb-4">Häufige Fragen von Patientinnen</h2>
+          <div className="faq-accordion-list">
+            {patientFaqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className={`faq-accordion-item ${openFaq === idx ? 'open' : ''}`}
+                onClick={() => toggleFaq(idx)}
+              >
+                <div className="faq-accordion-header">
+                  <h4 className="m-0 font-bold text-teal-dark">{faq.q}</h4>
+                  <ChevronDown size={20} className="faq-arrow" />
+                </div>
+                {openFaq === idx && (
+                  <div className="faq-accordion-body animate-fade-in">
+                    <p className="m-0 text-body text-sm">{faq.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA Box */}
       <section className="container mb-5">
         <div className="card patient-cta-card">
           <div>
-            <h2>Möchten Sie Ihren Gewebetyp und Ihr persönliches Risiko abklären?</h2>
-            <p>Wir beraten Sie individuell und beantworten all Ihre Fragen zur Mamma-MRT.</p>
+            <h2>Möchten Sie Ihre Vorsorge in beste Hände legen?</h2>
+            <p>Fragen Sie Ihren Wunschtermin ganz einfach und unverbindlich online an.</p>
           </div>
           <Link to="/terminanfrage" className="btn btn-primary">
             <Calendar size={18} />

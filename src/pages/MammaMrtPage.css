@@ -15,6 +15,44 @@
   font-size: 0.85rem;
 }
 
+/* Benefit Cards Grid at Top of Page */
+.benefit-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--teal);
+}
+
+.benefit-icon {
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.benefit-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin: 0;
+}
+
+.benefit-card p {
+  font-size: 0.9rem;
+  color: var(--ink);
+  line-height: 1.55;
+  margin: 0;
+}
+
 .density-container {
   padding: 2.5rem;
   background: var(--white);
@@ -178,67 +216,17 @@
   line-height: 1.5;
 }
 
-/* Benefit List */
-.benefit-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-  padding: 0;
-}
-
-.benefit-list li {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.benefit-icon {
-  color: var(--teal);
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-}
-
-.benefit-list strong {
-  font-size: 1rem;
-  color: var(--teal-dark);
-  display: block;
-}
-
-.benefit-list p {
-  font-size: 0.9rem;
-  color: var(--ink);
-  margin: 0;
-}
-
-.info-callout-card {
-  background: var(--teal-dark);
-  color: var(--white);
-  padding: 2.5rem;
-  border-radius: var(--radius-xl);
-}
-
-.info-icon {
-  color: var(--teal-light);
-  margin-bottom: 1rem;
-}
-
-.info-callout-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  color: var(--white);
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.info-callout-card p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95rem;
-  line-height: 1.6;
+@media (max-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
   .density-buttons {
     grid-template-columns: repeat(2, 1fr);
   }

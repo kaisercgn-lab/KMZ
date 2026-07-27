@@ -18,7 +18,7 @@ export const DatenschutzPage: React.FC = () => {
         <div className="card p-5" style={{ maxWidth: '840px', margin: '0 auto' }}>
           <h2>1. Datenschutz auf einen Blick</h2>
           <p className="mt-2 text-muted">
-            Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Nachfolgend informieren wir Sie über die Erhebung und Verarbeitung personenbezogener Daten bei der Nutzung der Website des KMZ Köln.
+            Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Nachfolgend informieren wir Sie über die Erhebung und Verarbeitung personenbezogener Daten bei der Nutzung der Website des KMZ.
           </p>
 
           <h3 className="mt-4">2. Datenerfassung auf unserer Website</h3>

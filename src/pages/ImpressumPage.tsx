@@ -20,8 +20,7 @@ export const ImpressumPage: React.FC = () => {
           <p className="mt-2">
             <strong>KMZ – Kaiser MR-Mammographie Zentrum</strong><br />
             Leitung: Prof. Dr. med. Clemens Kaiser<br />
-            Hauptstandort Diagnostik<br />
-            50667 Köln
+            Hauptstandort Diagnostik
           </p>
 
           <h3 className="mt-4">Kontakt</h3>

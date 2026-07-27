@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
             <ul className="contact-list">
               <li>
                 <MapPin size={16} className="contact-icon" />
-                <span>KMZ Diagnostikzentrum Köln<br />50667 Köln</span>
+                <span>KMZ Diagnostikzentrum<br />Hauptstandort Diagnostik</span>
               </li>
               <li>
                 <Phone size={16} className="contact-icon" />

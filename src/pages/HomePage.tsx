@@ -272,7 +272,7 @@ export const HomePage: React.FC = () => {
             <div className="cta-text-box">
               <h2>Möchten Sie persönliche Sicherheit für Ihre Gesundheit gewinnen?</h2>
               <p>
-                Vereinbaren Sie ganz einfach Ihren Termin für eine spezialisierte Mamma-MRT im KMZ Köln oder lassen Sie sich individuell beraten.
+                Vereinbaren Sie ganz einfach Ihren Termin für eine spezialisierte Mamma-MRT im KMZ oder lassen Sie sich individuell beraten.
               </p>
             </div>
             <div className="cta-button-box">

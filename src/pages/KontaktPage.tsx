@@ -13,7 +13,7 @@ export const KontaktPage: React.FC = () => {
           </div>
           <h1 className="page-title">Kontakt & Anfahrt</h1>
           <p className="page-description">
-            Wir freuen uns auf Ihren Besuch oder Ihre Kontaktaufnahme. Hier finden Sie alle Informationen zur Anreise und Erreichbarkeit des KMZ Köln.
+            Wir freuen uns auf Ihren Besuch oder Ihre Kontaktaufnahme. Hier finden Sie alle Informationen zur Anreise und Erreichbarkeit des KMZ.
           </p>
         </div>
       </section>
@@ -32,7 +32,7 @@ export const KontaktPage: React.FC = () => {
                 <MapPin className="detail-icon" size={24} />
                 <div>
                   <strong>Adresse & Anreise</strong>
-                  <p>KMZ – Kaiser MR-Mammographie Zentrum<br />Hauptstandort Diagnostik<br />50667 Köln</p>
+                  <p>KMZ – Kaiser MR-Mammographie Zentrum<br />Hauptstandort Diagnostik</p>
                 </div>
               </div>
 

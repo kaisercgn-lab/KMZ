@@ -62,6 +62,9 @@ export const HomePage: React.FC = () => {
           </div>
 
           <div className="hero-card-widget glass-panel">
+            <div className="hero-logo-display">
+              <img src="/logo.png" alt="Mamma MRT Zentrum – Kompetenz . Früherkennung . Präzision" className="hero-logo-img" />
+            </div>
             <div className="widget-header">
               <Award className="widget-icon" size={28} />
               <div>

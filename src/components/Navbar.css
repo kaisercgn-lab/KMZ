@@ -108,16 +108,16 @@
   text-decoration: none;
 }
 
-.logo-icon-box {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  box-shadow: 0 4px 12px rgba(35, 78, 82, 0.25);
+.header-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: var(--transition);
+}
+
+.header-logo-img:hover {
+  transform: scale(1.04);
 }
 
 .logo-text-box {

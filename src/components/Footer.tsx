@@ -11,9 +11,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: About */}
           <div className="footer-col brand-col">
             <Link to="/" className="footer-logo">
-              <div className="footer-logo-icon">
-                <HeartPulse size={22} />
-              </div>
+              <img src="/logo.png" alt="Mamma MRT Zentrum" className="footer-logo-img" />
               <div>
                 <span className="footer-logo-title">KMZ</span>
                 <span className="footer-logo-sub">Kaiser MR-Mammographie Zentrum</span>

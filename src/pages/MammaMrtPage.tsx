@@ -237,7 +237,20 @@ export const MammaMrtPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 4: CTA Banner */}
+      {/* Section 4: FAQ Link Callout */}
+      <section className="container mb-4">
+        <div className="card bg-stone p-4 border border-line rounded-xl flex align-center justify-between gap-md flex-wrap">
+          <div>
+            <h3 className="m-0 font-serif font-bold text-teal-dark text-xl">Haben Sie Fragen zur Mamma-MRT Untersuchung?</h3>
+            <p className="m-0 text-body text-sm text-muted">Antworten zu Zykluszeitpunkt, Kontrastmittel, Implantaten &amp; Kostenübernahme finden Sie in unseren FAQs.</p>
+          </div>
+          <Link to="/faqs" className="btn btn-outline">
+            <span>Alle Mamma-MRT FAQs lesen &rarr;</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Section 5: CTA Banner */}
       <section className="container mb-5">
         <div className="card patient-cta-card">
           <div>

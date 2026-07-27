@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
     setMobileMenuOpen(false);
   }, [location]);
 
-  const isMammaActive = location.pathname === '/MR-Mammographie' || location.pathname === '/qualitaetssicherung';
+  const isMammaActive = location.pathname === '/MR-Mammographie' || location.pathname === '/qualitaetssicherung' || location.pathname === '/faqs';
   const isUeberUnsActive = location.pathname === '/ueber-uns' || location.pathname === '/wissenschaft-forschung';
 
   return (
@@ -72,7 +72,7 @@ export const Navbar: React.FC = () => {
                 </Link>
               </li>
 
-              {/* Item 2: Mamma-MRT (Dropdown including Qualitätssicherung) */}
+              {/* Item 2: Mamma-MRT (Dropdown including Qualitätssicherung & FAQs) */}
               <li className="nav-item nav-item-has-dropdown">
                 <Link
                   to="/MR-Mammographie"
@@ -86,13 +86,19 @@ export const Navbar: React.FC = () => {
                     to="/MR-Mammographie"
                     className={`dropdown-item ${location.pathname === '/MR-Mammographie' ? 'active' : ''}`}
                   >
-                    Ablauf & Untersuchung
+                    Ablauf &amp; Untersuchung
                   </Link>
                   <Link
                     to="/qualitaetssicherung"
                     className={`dropdown-item ${location.pathname === '/qualitaetssicherung' ? 'active' : ''}`}
                   >
-                    Qualitätssicherung & QMRM
+                    Qualitätssicherung &amp; QMRM
+                  </Link>
+                  <Link
+                    to="/faqs"
+                    className={`dropdown-item ${location.pathname === '/faqs' ? 'active' : ''}`}
+                  >
+                    Häufige Fragen (FAQ)
                   </Link>
                 </div>
               </li>
@@ -201,6 +207,16 @@ export const Navbar: React.FC = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>└ Qualitätssicherung (QMRM)</span>
+                <ChevronRight size={18} />
+              </Link>
+            </li>
+            <li className="mobile-sub-item">
+              <Link
+                to="/faqs"
+                className={`mobile-nav-link ${location.pathname === '/faqs' ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>└ Häufige Fragen (FAQ)</span>
                 <ChevronRight size={18} />
               </Link>
             </li>

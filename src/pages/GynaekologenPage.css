@@ -1,5 +1,5 @@
 .primary-gradient {
-  background: linear-gradient(135deg, var(--primary-900) 0%, hsl(218, 50%, 25%) 100%);
+  background: linear-gradient(135deg, var(--teal-dark, #0d212d) 0%, #163c48 100%);
 }
 
 .indication-list {
@@ -8,20 +8,21 @@
   flex-direction: column;
   gap: 1.25rem;
   margin-top: 1.5rem;
+  padding: 0;
 }
 
 .indication-list li {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
-  background: var(--neutral-50);
+  background: var(--stone);
   padding: 1.1rem;
   border-radius: var(--radius-md);
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--line);
 }
 
 .indication-icon {
-  color: var(--teal-600);
+  color: var(--teal);
   flex-shrink: 0;
   margin-top: 0.2rem;
 }
@@ -33,7 +34,10 @@
 }
 
 .referral-card h3 {
-  font-size: 1.3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--teal-dark);
   margin-bottom: 0.5rem;
 }
 
@@ -44,7 +48,7 @@
 }
 
 .feature-icon {
-  color: var(--teal-600);
+  color: var(--teal);
   flex-shrink: 0;
 }
 
@@ -56,8 +60,10 @@
 }
 
 .doctor-hotline-box h4 {
-  font-size: 1.1rem;
-  color: var(--teal-700);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--teal-dark);
   margin-bottom: 0.25rem;
 }
 
@@ -73,5 +79,51 @@
   align-items: center;
   gap: 0.5rem;
   font-weight: 700;
-  color: var(--primary-900);
+  color: var(--teal-dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hotline-link:hover {
+  color: var(--teal);
+}
+
+/* Interview Highlight Section */
+.interview-highlight-card {
+  background: var(--white);
+  border: 1px solid var(--teal-100);
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.interview-badge-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--teal-50);
+  color: var(--teal-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.interview-fact-card {
+  background: var(--stone);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.interview-fact-card:hover {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-xs);
+}
+
+@media (max-width: 768px) {
+  .interview-highlight-card {
+    padding: 1.5rem;
+  }
 }

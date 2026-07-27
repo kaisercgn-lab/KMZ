@@ -177,17 +177,26 @@
   box-shadow: var(--shadow-md);
 }
 
-.doctor-avatar-circle {
-  width: 120px;
-  height: 120px;
+.doctor-avatar-frame {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
+  overflow: hidden;
+  border: 3.5px solid var(--teal);
+  box-shadow: 0 10px 28px rgba(44, 122, 123, 0.25);
   margin: 0 auto 1.5rem auto;
-  box-shadow: 0 8px 24px rgba(35, 78, 82, 0.25);
+  transition: var(--transition);
+}
+
+.doctor-avatar-frame:hover {
+  transform: scale(1.04);
+  box-shadow: 0 14px 36px rgba(44, 122, 123, 0.35);
+}
+
+.doctor-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .doctor-info h3 {

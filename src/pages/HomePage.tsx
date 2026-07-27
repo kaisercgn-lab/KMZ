@@ -97,8 +97,8 @@ export const HomePage: React.FC = () => {
           <div className="grid-2 welcome-grid">
             <div className="welcome-image-box">
               <div className="doctor-card">
-                <div className="doctor-avatar-circle">
-                  <UserCheck size={64} className="doctor-icon" />
+                <div className="doctor-avatar-frame">
+                  <img src="/prof-kaiser.jpg" alt="Prof. Dr. med. Clemens Kaiser" className="doctor-avatar-img" />
                 </div>
                 <div className="doctor-info">
                   <h3>Prof. Dr. med. Clemens Kaiser</h3>

@@ -3,20 +3,26 @@
   padding: 2.5rem 1.5rem;
 }
 
-.team-avatar-placeholder {
-  width: 100px;
-  height: 100px;
+.team-avatar-wrapper {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  background: var(--teal-50);
-  border: 2px solid var(--teal-100);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  border: 3px solid var(--teal);
+  box-shadow: 0 8px 24px rgba(44, 122, 123, 0.2);
   margin: 0 auto 1.25rem auto;
+  transition: var(--transition);
 }
 
-.team-avatar-icon {
-  color: var(--teal-600);
+.team-avatar-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(44, 122, 123, 0.3);
+}
+
+.team-member-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .team-badge {

@@ -8,19 +8,22 @@ export const UeberUnsPage: React.FC = () => {
       name: 'Prof. Dr. med. Clemens Kaiser',
       role: 'Leitung MRT-Zentrum & Sektionsleiter Mammadiagnostik',
       desc: 'Experte für Mamma-MRT mit über 20 Jahren Erfahrung in klinischer Forschung und Früherkennung.',
-      tag: 'Zentrumssleitung'
+      tag: 'Zentrumsleitung',
+      image: '/prof-kaiser.jpg'
     },
     {
       name: 'Dr. Sabrina Fastenrath',
       role: 'Fachärztin für Radiologie & Mammadiagnostik',
       desc: 'Spezialisiert auf hochauflösende Schnittbilddiagnostik und die Betreuung von Risikopatientinnen.',
-      tag: 'Oberärztin'
+      tag: 'Oberärztin',
+      image: '/sabrina-fastenrath.jpg'
     },
     {
       name: 'Esther Keller',
       role: 'Leitende Medizinisch-Technische Radiologieassistentin (MTRA)',
       desc: 'Verantwortlich für die optimale, schmerzfreie Lagerung und die Einhaltung höchster Qualitätsstandards bei allen MRT-Sequenzen.',
-      tag: 'MTRA-Leitung'
+      tag: 'MTRA-Leitung',
+      image: '/esther-keller.jpg'
     }
   ];
 
@@ -55,8 +58,8 @@ export const UeberUnsPage: React.FC = () => {
         <div className="grid-3 gap-lg">
           {teamMembers.map((member, idx) => (
             <div key={idx} className="card team-card">
-              <div className="team-avatar-placeholder">
-                <Users size={48} className="team-avatar-icon" />
+              <div className="team-avatar-wrapper">
+                <img src={member.image} alt={member.name} className="team-member-portrait" />
               </div>
               <span className="badge badge-teal team-badge">{member.tag}</span>
               <h3 className="team-name">{member.name}</h3>
@@ -78,30 +81,33 @@ export const UeberUnsPage: React.FC = () => {
               </div>
               <h2 className="section-title">Einheit im interdisziplinären Netzwerk</h2>
               <p className="text-body">
-                Das KMZ arbeitet hand in hand mit den führenden Brustzentren und Universitätskliniken zusammen. Wenn sich ein Befund abklärungsbedürftig zeigt, garantieren wir eine nahtlose interdisziplinäre Weiterbetreuung.
+                Das Kaiser MR-Mammographie Zentrum fungiert als hochspezialisiertes Kompetenzzentrum für Mamma-MRT. Wir arbeiten Hand in Hand mit behandelnden Gynäkologinnen, Frauenkliniken und interdisziplinären Brustzentren zusammen.
               </p>
-              <ul className="network-list">
-                <li>
-                  <ShieldCheck size={20} className="net-icon" />
-                  <span>Zertifizierte Qualitätsstandards nach ISO & ACR</span>
-                </li>
-                <li>
-                  <ShieldCheck size={20} className="net-icon" />
-                  <span>Enge Einbindung in interdisziplinäre Tumorboards</span>
-                </li>
-                <li>
-                  <ShieldCheck size={20} className="net-icon" />
-                  <span>Modernste 3 Tesla High-End Magnetresonanztomographen</span>
-                </li>
-              </ul>
+              <p className="text-body">
+                Unser Ziel ist die lückenlose Diagnostik: Von der Indikationsstellung über die hochauflösende 3T-MRT-Untersuchung bis hin zur direkten Befundbesprechung mit der Patientin und den zuweisenden Ärzt:innen.
+              </p>
             </div>
 
-            <div className="card quality-box-card">
-              <Award size={48} className="qual-award-icon" />
-              <h3>Höchste Qualitätsstufe in der Mamma-MRT</h3>
-              <p>
-                Regelmäßige Qualitätskontrollen, Doppelbefundung und die Teilnahme an internationalen Studien sichern Ihnen Befundqualität auf höchstem Niveau.
-              </p>
+            <div className="card shadow-lg p-4 bg-white">
+              <h3 className="card-title mb-3">Qualitätskriterien des KMZ</h3>
+              <ul className="checklist">
+                <li>
+                  <ShieldCheck size={20} className="text-teal" />
+                  <span>Spezialisierte High-End 3 Tesla Mamma-MRT Systeme</span>
+                </li>
+                <li>
+                  <ShieldCheck size={20} className="text-teal" />
+                  <span>Leitung durch international anerkannte Mamma-MRT Experten</span>
+                </li>
+                <li>
+                  <ShieldCheck size={20} className="text-teal" />
+                  <span>Qualitätskontrolle nach strengen wissenschaftlichen Kriterien</span>
+                </li>
+                <li>
+                  <ShieldCheck size={20} className="text-teal" />
+                  <span>Direkte Abrechnungsmöglichkeit im TK-Selektivvertrag</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

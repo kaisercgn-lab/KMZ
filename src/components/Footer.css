@@ -245,6 +245,9 @@
 }
 
 @media (max-width: 992px) {
+  .footer-top {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+  }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -252,12 +255,35 @@
 }
 
 @media (max-width: 640px) {
+  .footer-top {
+    padding: 2.25rem 1.25rem 1.5rem 1.25rem;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 1.75rem;
   }
+  .footer-col {
+    padding-bottom: 0.5rem;
+  }
+  .footer-logo {
+    margin-bottom: 0.75rem;
+  }
+  .footer-desc {
+    font-size: 0.84rem;
+    margin-bottom: 0.85rem;
+  }
+  .footer-heading {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
   .footer-bottom-inner {
     flex-direction: column;
     text-align: center;
+    gap: 0.65rem;
+  }
+  .legal-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
   }
 }

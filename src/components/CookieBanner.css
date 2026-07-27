@@ -8,6 +8,23 @@
   pointer-events: none;
 }
 
+@media (max-width: 640px) {
+  .cookie-banner-overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+  }
+  .cookie-banner-card {
+    border-radius: 16px 16px 0 0 !important;
+    padding: 1rem 1.25rem !important;
+  }
+  .cookie-text {
+    font-size: 0.82rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+}
+
 .cookie-banner-card {
   pointer-events: auto;
   background: var(--white);

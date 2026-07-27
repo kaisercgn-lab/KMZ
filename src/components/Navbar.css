@@ -345,6 +345,36 @@
     display: none;
   }
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-cta span {
+    display: none;
+  }
+  .nav-cta {
+    padding: 0.5rem;
+    border-radius: var(--radius-full);
+  }
+}
+
+@media (max-width: 640px) {
+  .top-utility-bar {
+    display: none;
+  }
+  .navbar-header {
+    padding: 0.5rem 0;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .logo-subtitle {
+    font-size: 0.65rem;
+  }
+  .logo-title {
+    font-size: 1.35rem;
   }
 }

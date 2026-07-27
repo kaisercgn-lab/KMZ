@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Calendar, Menu, X, HeartPulse, ChevronRight, PhoneCall, ShieldCheck, Clock } from 'lucide-react';
+import { Calendar, Menu, X, ChevronRight, PhoneCall, ShieldCheck, Clock, ChevronDown } from 'lucide-react';
 import './Navbar.css';
 
 export const Navbar: React.FC = () => {
@@ -20,15 +20,8 @@ export const Navbar: React.FC = () => {
     setMobileMenuOpen(false);
   }, [location]);
 
-  // Clean structured main navigation
-  const primaryNavLinks = [
-    { label: 'Für Patientinnen', path: '/brustkrebsvorsorge' },
-    { label: 'Mamma-MRT', path: '/MR-Mammographie' },
-    { label: 'Qualitätssicherung', path: '/qualitaetssicherung' },
-    { label: 'Für Gynäkolog:innen', path: '/fuer-gynaekolog-innen' },
-    { label: 'Wissenschaft', path: '/wissenschaft-forschung' },
-    { label: 'Über uns', path: '/ueber-uns' },
-  ];
+  const isMammaActive = location.pathname === '/MR-Mammographie' || location.pathname === '/qualitaetssicherung';
+  const isUeberUnsActive = location.pathname === '/ueber-uns' || location.pathname === '/wissenschaft-forschung';
 
   return (
     <>
@@ -69,19 +62,75 @@ export const Navbar: React.FC = () => {
 
           <nav className="navbar-nav">
             <ul className="nav-list">
-              {primaryNavLinks.map((link) => {
-                const isActive = location.pathname === link.path;
-                return (
-                  <li key={link.path} className="nav-item">
-                    <Link
-                      to={link.path}
-                      className={`nav-link ${isActive ? 'active' : ''}`}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                );
-              })}
+              {/* Item 1: Patientinnen */}
+              <li className="nav-item">
+                <Link
+                  to="/brustkrebsvorsorge"
+                  className={`nav-link ${location.pathname === '/brustkrebsvorsorge' ? 'active' : ''}`}
+                >
+                  Für Patientinnen
+                </Link>
+              </li>
+
+              {/* Item 2: Mamma-MRT (Dropdown including Qualitätssicherung) */}
+              <li className="nav-item nav-item-has-dropdown">
+                <Link
+                  to="/MR-Mammographie"
+                  className={`nav-link ${isMammaActive ? 'active' : ''}`}
+                >
+                  <span>Mamma-MRT</span>
+                  <ChevronDown size={14} className="dropdown-arrow" />
+                </Link>
+                <div className="dropdown-menu">
+                  <Link
+                    to="/MR-Mammographie"
+                    className={`dropdown-item ${location.pathname === '/MR-Mammographie' ? 'active' : ''}`}
+                  >
+                    Ablauf & Untersuchung
+                  </Link>
+                  <Link
+                    to="/qualitaetssicherung"
+                    className={`dropdown-item ${location.pathname === '/qualitaetssicherung' ? 'active' : ''}`}
+                  >
+                    Qualitätssicherung & QMRM
+                  </Link>
+                </div>
+              </li>
+
+              {/* Item 3: Für Gynäkolog:innen */}
+              <li className="nav-item">
+                <Link
+                  to="/fuer-gynaekolog-innen"
+                  className={`nav-link ${location.pathname === '/fuer-gynaekolog-innen' ? 'active' : ''}`}
+                >
+                  Für Gynäkolog:innen
+                </Link>
+              </li>
+
+              {/* Item 4: Über uns (Dropdown including Wissenschaft) */}
+              <li className="nav-item nav-item-has-dropdown">
+                <Link
+                  to="/ueber-uns"
+                  className={`nav-link ${isUeberUnsActive ? 'active' : ''}`}
+                >
+                  <span>Über uns</span>
+                  <ChevronDown size={14} className="dropdown-arrow" />
+                </Link>
+                <div className="dropdown-menu">
+                  <Link
+                    to="/ueber-uns"
+                    className={`dropdown-item ${location.pathname === '/ueber-uns' ? 'active' : ''}`}
+                  >
+                    Das Zentrum & Team
+                  </Link>
+                  <Link
+                    to="/wissenschaft-forschung"
+                    className={`dropdown-item ${location.pathname === '/wissenschaft-forschung' ? 'active' : ''}`}
+                  >
+                    Wissenschaft & Forschung
+                  </Link>
+                </div>
+              </li>
             </ul>
           </nav>
 
@@ -125,25 +174,63 @@ export const Navbar: React.FC = () => {
           </div>
 
           <ul className="mobile-nav-list">
-            {primaryNavLinks.map((link) => (
-              <li key={link.path}>
-                <Link
-                  to={link.path}
-                  className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span>{link.label}</span>
-                  <ChevronRight size={18} />
-                </Link>
-              </li>
-            ))}
             <li>
               <Link
-                to="/news"
-                className={`mobile-nav-link ${location.pathname === '/news' ? 'active' : ''}`}
+                to="/brustkrebsvorsorge"
+                className={`mobile-nav-link ${location.pathname === '/brustkrebsvorsorge' ? 'active' : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span>Aktuelles & News</span>
+                <span>Für Patientinnen</span>
+                <ChevronRight size={18} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/MR-Mammographie"
+                className={`mobile-nav-link ${location.pathname === '/MR-Mammographie' ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Mamma-MRT Ablauf</span>
+                <ChevronRight size={18} />
+              </Link>
+            </li>
+            <li className="mobile-sub-item">
+              <Link
+                to="/qualitaetssicherung"
+                className={`mobile-nav-link ${location.pathname === '/qualitaetssicherung' ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>└ Qualitätssicherung (QMRM)</span>
+                <ChevronRight size={18} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/fuer-gynaekolog-innen"
+                className={`mobile-nav-link ${location.pathname === '/fuer-gynaekolog-innen' ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Für Gynäkolog:innen</span>
+                <ChevronRight size={18} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/ueber-uns"
+                className={`mobile-nav-link ${location.pathname === '/ueber-uns' ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Über uns & Team</span>
+                <ChevronRight size={18} />
+              </Link>
+            </li>
+            <li className="mobile-sub-item">
+              <Link
+                to="/wissenschaft-forschung"
+                className={`mobile-nav-link ${location.pathname === '/wissenschaft-forschung' ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>└ Wissenschaft & Forschung</span>
                 <ChevronRight size={18} />
               </Link>
             </li>

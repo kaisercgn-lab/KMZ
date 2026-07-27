@@ -26,29 +26,26 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 2: Navigation */}
+          {/* Col 2: Navigation Mamma-MRT */}
           <div className="footer-col">
-            <h4 className="footer-heading">Leistungen & Info</h4>
+            <h4 className="footer-heading">Mamma-MRT & Diagnostik</h4>
             <ul className="footer-links">
               <li><Link to="/brustkrebsvorsorge">Für Patientinnen</Link></li>
-              <li><Link to="/MR-Mammographie">Mamma-MRT & Ablauf</Link></li>
-              <li><Link to="/qualitaetssicherung">Qualitätssicherung (QMRM)</Link></li>
+              <li><Link to="/MR-Mammographie">Mamma-MRT Ablauf</Link></li>
+              <li><Link to="/qualitaetssicherung">Qualitätssicherung & QMRM</Link></li>
               <li><Link to="/fuer-gynaekolog-innen">Für Gynäkolog:innen</Link></li>
-              <li><Link to="/wissenschaft-forschung">Wissenschaft & Forschung</Link></li>
-              <li><Link to="/ueber-uns">Über uns & Team</Link></li>
             </ul>
           </div>
 
-          {/* Col 3: Service & FAQ */}
+          {/* Col 3: Über uns & Service */}
           <div className="footer-col">
-            <h4 className="footer-heading">Service & Hilfe</h4>
+            <h4 className="footer-heading">Über uns & Service</h4>
             <ul className="footer-links">
+              <li><Link to="/ueber-uns">Das Zentrum & Team</Link></li>
+              <li><Link to="/wissenschaft-forschung">Wissenschaft & Forschung</Link></li>
               <li><Link to="/terminanfrage">Termin online anfragen</Link></li>
-              <li><Link to="/faqs">Häufig gestellte Fragen (FAQ)</Link></li>
-              <li><Link to="/wissenschaft-forschung#literatur">Literaturverzeichnis</Link></li>
-              <li><Link to="/kontakt">Kontakt & Anfahrtsbeschreibung</Link></li>
-              <li><Link to="/impressum">Impressum</Link></li>
-              <li><Link to="/datenschutz">Datenschutz</Link></li>
+              <li><Link to="/faqs">Häufige Fragen (FAQ)</Link></li>
+              <li><Link to="/kontakt">Kontakt & Anfahrt</Link></li>
             </ul>
           </div>
 

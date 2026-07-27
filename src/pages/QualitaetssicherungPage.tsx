@@ -45,6 +45,20 @@ export const QualitaetssicherungPage: React.FC = () => {
 
       {/* Main QMRM & TK Banner Section */}
       <section className="section-padding container">
+        {/* Background Context Box: Reimbursement & Quality Problem */}
+        <div className="bg-stone border border-line rounded-2xl p-6 mb-5 shadow-sm">
+          <div className="flex items-center gap-3 mb-3">
+            <ShieldCheck size={24} className="text-teal" />
+            <h3 className="font-serif text-xl font-bold text-teal-dark m-0">Hintergrund: Warum Qualitätssicherung bei der Mamma-MRT entscheidend ist</h3>
+          </div>
+          <p className="text-body mb-3">
+            Die Mamma-MRT gilt wissenschaftlich als die empfindlichste Methode zur Brustkrebsfrüherkennung. Dennoch leidet die Versorgung in Deutschland bislang unter <strong>fehlenden flächendeckenden Qualitätsstandards</strong>. Stark schwankende Geräteausstattungen, unzureichende Erfahrung der Befunder:innen und fehlende Mindestfallzahlen führen dazu, dass gesetzliche Krankenkassen die Mamma-MRT bisher nur zurückhaltend als Standarduntersuchung für erweiterte Indikationen (wie z. B. dichtes Brustgewebe) erstatten.
+          </p>
+          <p className="text-body m-0">
+            <strong>Die QMRM-Lösung:</strong> Durch die Etablierung eines verbindlichen <strong>Mindestqualitätsstandards über die QMRM GmbH</strong> stellen Krankenkassen wie die <strong>Techniker Krankenkasse (TK)</strong> sicher, dass kein finanzieller oder diagnostischer Verlust durch Über- oder Fehldiagnostik entsteht. So erhalten Versicherte eine erstklassige, evidenzbasierte Versorgung und die Kassen die notwendige Planungssicherheit.
+          </p>
+        </div>
+
         <div className="qmrm-contract-card glass-panel shadow-xl">
           <div className="qmrm-badge-header">
             <span className="badge badge-teal p-2 px-3">

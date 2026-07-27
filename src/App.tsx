@@ -9,6 +9,7 @@ import { PatientinnenPage } from './pages/PatientinnenPage';
 import { MammaMrtPage } from './pages/MammaMrtPage';
 import { GynaekologenPage } from './pages/GynaekologenPage';
 import { WissenschaftPage } from './pages/WissenschaftPage';
+import { QualitaetssicherungPage } from './pages/QualitaetssicherungPage';
 import { UeberUnsPage } from './pages/UeberUnsPage';
 import { TerminanfragePage } from './pages/TerminanfragePage';
 import { KontaktPage } from './pages/KontaktPage';
@@ -36,6 +37,7 @@ export const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/brustkrebsvorsorge" element={<PatientinnenPage />} />
           <Route path="/MR-Mammographie" element={<MammaMrtPage />} />
+          <Route path="/qualitaetssicherung" element={<QualitaetssicherungPage />} />
           <Route path="/fuer-gynaekolog-innen" element={<GynaekologenPage />} />
           <Route path="/wissenschaft-forschung" element={<WissenschaftPage />} />
           <Route path="/ueber-uns" element={<UeberUnsPage />} />

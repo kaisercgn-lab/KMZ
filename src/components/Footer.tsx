@@ -32,10 +32,10 @@ export const Footer: React.FC = () => {
             <ul className="footer-links">
               <li><Link to="/brustkrebsvorsorge">Für Patientinnen</Link></li>
               <li><Link to="/MR-Mammographie">Mamma-MRT & Ablauf</Link></li>
+              <li><Link to="/qualitaetssicherung">Qualitätssicherung (QMRM)</Link></li>
               <li><Link to="/fuer-gynaekolog-innen">Für Gynäkolog:innen</Link></li>
               <li><Link to="/wissenschaft-forschung">Wissenschaft & Forschung</Link></li>
               <li><Link to="/ueber-uns">Über uns & Team</Link></li>
-              <li><Link to="/news">Aktuelle Meldungen</Link></li>
             </ul>
           </div>
 

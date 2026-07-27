@@ -1,0 +1,143 @@
+.qualitaet-page {
+  width: 100%;
+}
+
+.qmrm-contract-card {
+  background: var(--white);
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.qmrm-contract-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--teal), var(--accent));
+}
+
+.qmrm-card-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.1rem;
+  color: var(--teal-dark);
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+
+.qmrm-highlights-box {
+  background: var(--sand);
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+}
+
+.highlight-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--teal-dark);
+  margin-bottom: 1.25rem;
+}
+
+.qmrm-checklist li {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pillar-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  transition: var(--transition);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--teal-light);
+}
+
+.pillar-icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: var(--teal-50);
+  color: var(--teal-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(44, 122, 123, 0.15);
+}
+
+.pillar-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--teal-dark);
+  margin-bottom: 0.5rem;
+}
+
+.pillar-desc {
+  font-size: 0.95rem;
+  color: var(--neutral-600);
+  line-height: 1.6;
+}
+
+.callout-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--teal);
+}
+
+.indication-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.indication-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.ind-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--white);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.flex-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .qmrm-contract-card {
+    padding: 2rem 1.5rem;
+  }
+  .pillar-card {
+    flex-direction: column;
+  }
+}

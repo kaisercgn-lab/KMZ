@@ -24,6 +24,7 @@ export const Navbar: React.FC = () => {
   const primaryNavLinks = [
     { label: 'Für Patientinnen', path: '/brustkrebsvorsorge' },
     { label: 'Mamma-MRT', path: '/MR-Mammographie' },
+    { label: 'Qualitätssicherung', path: '/qualitaetssicherung' },
     { label: 'Für Gynäkolog:innen', path: '/fuer-gynaekolog-innen' },
     { label: 'Wissenschaft', path: '/wissenschaft-forschung' },
     { label: 'Über uns', path: '/ueber-uns' },

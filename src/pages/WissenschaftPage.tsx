@@ -15,6 +15,15 @@ interface LiteratureItem {
 const literatureList: LiteratureItem[] = [
   {
     id: 1,
+    authors: 'Kaiser C, Tollens F, Dietzel M et al.',
+    year: 2022,
+    title: 'High-Efficiency 1.5T Breast MRI Protocol: Full Sequence Evaluation (T2, DWI, Dynamic DCE) under 10 Minutes',
+    journal: 'Siemens Healthineers Clinical Publication & MAGNETOM World',
+    doiLink: 'https://www.siemens-healthineers.com/media/binaries/content/assets/di/mri/magnetom-world/publications/clinical-corner/case-studies/mammography/kaiser_breast_mri_protocol.pdf',
+    category: 'studien'
+  },
+  {
+    id: 2,
     authors: 'Sardanelli F, Podo F, Santoro F, et al.',
     year: 2011,
     title: 'Multicenter surveillance of women at high genetic breast cancer risk using mammography, ultrasonography, and contrast-enhanced magnetic resonance imaging',
@@ -22,7 +31,7 @@ const literatureList: LiteratureItem[] = [
     category: 'studien'
   },
   {
-    id: 2,
+    id: 3,
     authors: 'Bakker MF, de Lange SV, Pijnappel RM, et al. (DENSE Trial Study Group)',
     year: 2019,
     title: 'Supplemental MRI Screening for Women with Extremely Dense Breast Tissue',
@@ -30,7 +39,7 @@ const literatureList: LiteratureItem[] = [
     category: 'studien'
   },
   {
-    id: 3,
+    id: 4,
     authors: 'Tollens F, Baltzer PAT, Dietzel M, Kaiser C et al.',
     year: 2021,
     title: 'Cost-Effectiveness of MR Mammography in Breast Cancer Screening of Women With Extremely Dense Breasts After Two Rounds of Screening',

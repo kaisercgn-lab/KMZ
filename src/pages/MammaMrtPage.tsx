@@ -12,7 +12,9 @@ import {
   Eye,
   Info,
   Award,
-  HelpCircle
+  HelpCircle,
+  ExternalLink,
+  Timer
 } from 'lucide-react';
 import './MammaMrtPage.css';
 
@@ -36,7 +38,7 @@ export const MammaMrtPage: React.FC = () => {
           <div className="header-badges">
             <span className="badge badge-teal-light">Strahlenfrei</span>
             <span className="badge badge-teal-light">Höchste Sensitivität (&gt;95%)</span>
-            <span className="badge badge-teal-light">Dauer ca. 15–20 Min</span>
+            <span className="badge badge-teal-light">Messzeit &lt; 10 Minuten</span>
           </div>
         </div>
       </section>
@@ -131,7 +133,64 @@ export const MammaMrtPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 2: Step-by-Step Examination Process */}
+      {/* Section 2: 10-Minute High-End Protocol Highlight */}
+      <section className="section-padding bg-stone">
+        <div className="container">
+          <div className="card protocol-highlight-card">
+            <div className="flex align-center gap-md flex-wrap mb-4">
+              <div className="protocol-icon-box">
+                <Timer size={32} />
+              </div>
+              <div>
+                <span className="badge badge-teal mb-1">Wissenschaftliche Innovation von Prof. Kaiser</span>
+                <h2 className="section-title m-0">Vollständiges Mamma-MRT Protokoll in unter 10 Minuten</h2>
+              </div>
+            </div>
+
+            <p className="text-body">
+              Früher dauerten Mamma-MRT-Untersuchungen oft 30 Minuten oder länger. Durch moderne Beschleunigungsverfahren (wie SMS &amp; iPAT) hat das Team um <strong>Prof. Dr. med. Clemens Kaiser</strong> ein optimiertes Hochleistungsprotokoll etabliert: Im KMZ wird das <strong>vollständige diagnostische Dreifach-Protokoll in unter 10 Minuten Messzeit</strong> durchgeführt – ohne Kompromisse bei der Präzision.
+            </p>
+
+            <div className="grid-3 gap-md mt-4">
+              <div className="protocol-step-box">
+                <div className="protocol-time">ca. 1:36 Min</div>
+                <h4>1. T2-Gewebeanalyse</h4>
+                <p>Hochauflösende anatomische Beurteilung des Drüsengewebes, Abgrenzung von Flüssigkeiten und Zysten.</p>
+              </div>
+
+              <div className="protocol-step-box">
+                <div className="protocol-time">ca. 1:46 Min</div>
+                <h4>2. Diffusionsgewichtete Bildgebung (DWI)</h4>
+                <p>Misst die mikroskopische Molekularbewegung im Zellgewebe zur frühzeitigen Abgrenzung verdächtiger Zellareale.</p>
+              </div>
+
+              <div className="protocol-step-box">
+                <div className="protocol-time">ca. 6:21 Min</div>
+                <h4>3. Volle Kontrastmittel-Dynamik (DCE)</h4>
+                <p>Erfasst hochpräzise die Anreicherung in gefäßreichen Tumoren für maximale diagnostische Eindeutigkeit.</p>
+              </div>
+            </div>
+
+            <div className="protocol-footer-row mt-4 flex align-center justify-between gap-md flex-wrap pt-3 border-t border-line">
+              <div className="flex align-center gap-sm">
+                <CheckCircle2 size={20} className="text-teal" />
+                <span className="font-bold text-teal-dark text-sm">Vorteil für Sie: Minimaler Aufenthalt im Gerät &amp; höchster Komfort bei 100 % Sicherheit.</span>
+              </div>
+              <a
+                href="https://www.siemens-healthineers.com/media/binaries/content/assets/di/mri/magnetom-world/publications/clinical-corner/case-studies/mammography/kaiser_breast_mri_protocol.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline btn-sm"
+              >
+                <ExternalLink size={14} />
+                <span>Publikation von Prof. Kaiser lesen (PDF)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Step-by-Step Examination Process */}
       <section className="section-padding bg-light">
         <div className="container">
           <div className="text-center mb-5">
@@ -164,9 +223,9 @@ export const MammaMrtPage: React.FC = () => {
 
             <div className="card process-card">
               <div className="process-number">3</div>
-              <h3>MRT-Messung (15–20 Min)</h3>
+              <h3>Messung (&lt; 10 Min)</h3>
               <p>
-                Über einen Venenzugang am Arm wird ein sehr gut verträgliches MRT-Kontrastmittel verabreicht. Hochfrequente Magnetwellen erstellen hauchdünne Schnittbilder.
+                Über einen Venenzugang am Arm wird ein sehr gut verträgliches MRT-Kontrastmittel verabreicht. Das 10-Minuten-Protokoll erstellt hauchdünne Schnittbilder.
               </p>
             </div>
 
@@ -181,7 +240,7 @@ export const MammaMrtPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 3: Benefits Highlight */}
+      {/* Section 4: Benefits Highlight */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="grid-2 align-center gap-lg">
@@ -239,7 +298,7 @@ export const MammaMrtPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 4: QMRM & Qualitätssicherung Banner */}
+      {/* Section 5: QMRM & Qualitätssicherung Banner */}
       <section className="container mb-4">
         <div className="card bg-teal-50 border border-teal-100 p-4 rounded-xl flex align-center justify-between gap-md flex-wrap shadow-sm">
           <div className="flex align-center gap-md">
@@ -257,7 +316,7 @@ export const MammaMrtPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 5: FAQ Banner */}
+      {/* Section 6: FAQ Banner */}
       <section className="container mb-4">
         <div className="card bg-stone p-4 border border-line rounded-xl flex align-center justify-between gap-md flex-wrap">
           <div className="flex align-center gap-md">
@@ -273,7 +332,7 @@ export const MammaMrtPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 6: Final Single Clean CTA Banner */}
+      {/* Section 7: Final Single Clean CTA Banner */}
       <section className="container mb-5">
         <div className="card patient-cta-card">
           <div>

@@ -9,21 +9,21 @@ export const UeberUnsPage: React.FC = () => {
       role: 'Leitung MRT-Zentrum & Sektionsleiter Mammadiagnostik',
       desc: 'Experte für Mamma-MRT mit über 20 Jahren Erfahrung in klinischer Forschung und Früherkennung.',
       tag: 'Zentrumsleitung',
-      image: '/prof-kaiser.jpg'
+      image: './prof-kaiser.jpg'
     },
     {
       name: 'Dr. Sabrina Fastenrath',
       role: 'Fachärztin für Radiologie & Mammadiagnostik',
       desc: 'Spezialisiert auf hochauflösende Schnittbilddiagnostik und die Betreuung von Risikopatientinnen.',
       tag: 'Oberärztin',
-      image: '/sabrina-fastenrath.jpg'
+      image: './sabrina-fastenrath.jpg'
     },
     {
       name: 'Esther Keller',
       role: 'Leitende Medizinisch-Technische Radiologieassistentin (MTRA)',
       desc: 'Verantwortlich für die optimale, schmerzfreie Lagerung und die Einhaltung höchster Qualitätsstandards bei allen MRT-Sequenzen.',
       tag: 'MTRA-Leitung',
-      image: '/esther-keller.jpg'
+      image: './esther-keller.jpg'
     }
   ];
 

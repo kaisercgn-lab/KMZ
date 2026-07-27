@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: About */}
           <div className="footer-col brand-col">
             <Link to="/" className="footer-logo">
-              <img src="/logo.png" alt="Mamma MRT Zentrum" className="footer-logo-img" />
+              <img src="./logo.png" alt="Mamma MRT Zentrum" className="footer-logo-img" />
               <div>
                 <span className="footer-logo-title">KMZ</span>
                 <span className="footer-logo-sub">Kaiser MR-Mammographie Zentrum</span>

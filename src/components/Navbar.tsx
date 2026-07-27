@@ -53,7 +53,7 @@ export const Navbar: React.FC = () => {
       <header className={`navbar-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-container">
           <Link to="/" className="navbar-logo">
-            <img src="/logo.png" alt="Mamma MRT Zentrum" className="header-logo-img" />
+            <img src="./logo.png" alt="Mamma MRT Zentrum" className="header-logo-img" />
             <div className="logo-text-box">
               <span className="logo-title">KMZ</span>
               <span className="logo-subtitle">Kaiser MR-Mammographie Zentrum</span>
@@ -157,7 +157,7 @@ export const Navbar: React.FC = () => {
         <div className="drawer-content">
           <div className="drawer-header">
             <Link to="/" className="navbar-logo" onClick={() => setMobileMenuOpen(false)}>
-              <img src="/logo.png" alt="Mamma MRT Zentrum" className="header-logo-img" />
+              <img src="./logo.png" alt="Mamma MRT Zentrum" className="header-logo-img" />
               <div className="logo-text-box">
                 <span className="logo-title">KMZ</span>
                 <span className="logo-subtitle">Kaiser MR-Mammographie Zentrum</span>

@@ -166,7 +166,7 @@ export const QualitaetssicherungPage: React.FC = () => {
             
             <div className="team-callout p-4 bg-stone rounded-xl border border-line">
               <div className="flex align-center gap-md">
-                <img src="/prof-kaiser.jpg" alt="Prof. Dr. med. Clemens Kaiser" className="callout-avatar" />
+                <img src="./prof-kaiser.jpg" alt="Prof. Dr. med. Clemens Kaiser" className="callout-avatar" />
                 <div>
                   <h4 className="m-0 text-teal-dark font-serif font-bold text-lg">Prof. Dr. med. Clemens Kaiser</h4>
                   <p className="m-0 text-sm text-muted">Sektionsleiter Mammadiagnostik & Geschäftsführer QMRM GmbH</p>

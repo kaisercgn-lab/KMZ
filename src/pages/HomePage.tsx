@@ -63,7 +63,7 @@ export const HomePage: React.FC = () => {
 
           <div className="hero-card-widget glass-panel">
             <div className="hero-logo-display">
-              <img src="/logo.png" alt="Mamma MRT Zentrum – Kompetenz . Früherkennung . Präzision" className="hero-logo-img" />
+              <img src="./logo.png" alt="Mamma MRT Zentrum – Kompetenz . Früherkennung . Präzision" className="hero-logo-img" />
             </div>
             <div className="widget-header">
               <Award className="widget-icon" size={28} />
@@ -98,7 +98,7 @@ export const HomePage: React.FC = () => {
             <div className="welcome-image-box">
               <div className="doctor-card">
                 <div className="doctor-avatar-frame">
-                  <img src="/prof-kaiser.jpg" alt="Prof. Dr. med. Clemens Kaiser" className="doctor-avatar-img" />
+                  <img src="./prof-kaiser.jpg" alt="Prof. Dr. med. Clemens Kaiser" className="doctor-avatar-img" />
                 </div>
                 <div className="doctor-info">
                   <h3>Prof. Dr. med. Clemens Kaiser</h3>

@@ -1,50 +1,75 @@
 import React, { useState } from 'react';
-import { HelpCircle, ChevronDown, Search, ShieldCheck } from 'lucide-react';
+import { HelpCircle, ChevronDown, Search, ShieldCheck, PhoneCall, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './FaqPage.css';
 
 interface FaqItem {
   id: number;
   question: string;
   answer: string;
-  category: 'kosten' | 'ablauf' | 'sicherheit';
+  category: 'kosten' | 'ablauf' | 'sicherheit' | 'indikationen';
 }
 
 const faqData: FaqItem[] = [
   {
     id: 1,
-    question: 'Übernimmt meine Krankenkasse die Kosten für eine Mamma-MRT?',
-    answer: 'Privatkassen und Beihilfestellen übernehmen die Kosten bei entsprechender Indikation (wie dichter Brust, familiärem Risiko oder Abklärungsbedarf) in der Regel problemlos. Für gesetzlich versicherte Patientinnen bieten wir die Mamma-MRT als Selbstzahlerleistung (IGeL nach GOÄ) an. In Einzelfällen kann ein Antrag auf Kostenübernahme bei der GKV gestellt werden.',
-    category: 'kosten'
+    question: 'Welche Vorteile hat die Mamma-MRT gegenüber der Röntgen-Mammographie und Ultraschall?',
+    answer: 'Die Mamma-MRT ist mit einer Treffsicherheit von über 95 % das empfindlichste bildgebende Verfahren in der Brustdiagnostik. Sie arbeitet völlig frei von schädlicher Röntgenstrahlung und weist selbst kleinstgewebliche Gewebeveränderungen unter 1 cm unabhängig von der Brustdichte zuverlässig nach. Insbesondere bei dichtem Brustdrüsengewebe (ACR Typ C & D), wo Röntgenscreenings bis zu 50 % der Befunde übersehen können, bietet die MRT maximale diagnostische Sicherheit.',
+    category: 'indikationen'
   },
   {
     id: 2,
-    question: 'Ist die Mamma-MRT Untersuchung schmerzhaft?',
-    answer: 'Nein, absolut nicht. Anders als bei der herkömmlichen Mammographie wird die Brust während der MRT-Untersuchung nicht komprimiert oder gequetscht. Sie liegen entspannt auf dem Bauch, und die Brust ruht schmerzfrei in einer abgepolsterten Spulenaussparung.',
-    category: 'ablauf'
+    question: 'Wer übernimmt die Kosten für eine Mamma-MRT im KMZ?',
+    answer: 'Für Versicherte der Techniker Krankenkasse (TK) werden die Kosten im Rahmen unseres Selektivvertrags mit der QMRM GmbH bei dichtem Gewebe (ACR C/D) oder familiärem Risiko zu 100 % von der TK übernommen. Private Krankenversicherungen und Beihilfestellen erstatten die Mamma-MRT bei medizinischer Indikation ebenfalls lückenlos. Gesetzlich versicherten Patientinnen anderer Kassen bieten wir die Mamma-MRT als Selbstzahlerleistung (IGeL nach GOÄ) an.',
+    category: 'kosten'
   },
   {
     id: 3,
-    question: 'Warum ist ein Kontrastmittel für die Mamma-MRT notwendig?',
-    answer: 'Das MRT-Kontrastmittel (Gadolinium) ist essenziell, weil bösartige Gewebeveränderungen (Tumore) vermehrt neue Blutgefäße bilden und Kontrastmittel schneller anreichern als gesundes Drüsengewebe. Dadurch werden selbst millimeterkleine Karzinome hochpräzise sichtbar.',
-    category: 'sicherheit'
+    question: 'Welche Frauen profitieren besonders von einem Mamma-MRT Screening?',
+    answer: 'Ein Mamma-MRT empfiehlt sich besonders für Frauen mit dichtem Brustdrüsengewebe (ACR C & D, betrifft ca. 45 % aller Frauen), Frauen mit familiärer/genetischer Vorbelastung (z. B. BRCA1/2-Genmutation), Trägerinnen von Brustimplantaten sowie für Frauen, die eine präzise Krebsfrüherkennung ohne Strahlenbelastung wünschen.',
+    category: 'indikationen'
   },
   {
     id: 4,
-    question: 'Wann im Monatszyklus sollte die Untersuchung durchgeführt werden?',
-    answer: 'Bei Frauen vor den Wechseljahren ist der optimale Untersuchungszeitraum zwischen dem 7. und 14. Zyklustag (gemessen ab dem ersten Tag der letzten Regelblutung). In dieser Phase ist das Drüsengewebe am wenigsten durch körpereigene Hormone beeinflusst.',
+    question: 'Ist die Mamma-MRT Untersuchung schmerzhaft oder eng?',
+    answer: 'Nein, die Untersuchung ist völlig schmerzfrei. Im Gegensatz zur Röntgen-Mammographie wird die Brust nicht gequetscht oder komprimiert. Sie liegen entspannt auf dem Bauch in einer abgepolsterten Spezial-Brustspule. Unsere modernen 3-Tesla-MRT-Geräte verfügen zudem über einen sehr breiten Tunnel mit angenehmer Belüftung. Auf Wunsch spielen wir Ihre Lieblingsmusik über Kopfhörer ein.',
     category: 'ablauf'
   },
   {
     id: 5,
-    question: 'Kann eine Mamma-MRT auch mit Brustimplantaten durchgeführt werden?',
-    answer: 'Ja, sehr gut! Die Mamma-MRT ist die bevorzugte Untersuchungsmethode bei Frauen mit Silikonimplantaten, da sie sowohl das Drüsengewebe hinter dem Implantat als auch die Hülle und Integrität des Implantats scharf darstellen kann.',
+    question: 'Warum ist die Verabreichung eines Kontrastmittels notwendig?',
+    answer: 'Bösartige Tumore benötigen für ihr Wachstum neue Blutgefäße (Neovaskularisation), die das MRT-Kontrastmittel deutlich schneller anreichern als gesundes Gewebe. Das Gadolinium-haltige Kontrastmittel macht dadurch selbst millimeterkleine Krebsfrüherkennungssignale im MRT leuchtend sichtbar.',
     category: 'sicherheit'
   },
   {
     id: 6,
-    question: 'Wie lange dauert die gesamte Untersuchung im KMZ?',
-    answer: 'Die reine Messzeit im MRT-Gerät beträgt ca. 15 bis 20 Minuten. Inklusive Vorbesprechung, Ausfüllen des Anamnesebogens und dem anschließenden Befundgespräch sollten Sie etwa 45 bis 60 Minuten einplanen.',
+    question: 'Wie sicher ist das Kontrastmittel und gibt es Nebenwirkungen?',
+    answer: 'Das im KMZ genutzte MRT-Kontrastmittel ist äußerst sicher und gehört zu den am besten untersuchten Medikamenten der Radiologie. Unverträglichkeiten sind extrem selten. Das Kontrastmittel wird innerhalb weniger Stunden vollständig und spurlos über die Nieren ausgeschieden.',
+    category: 'sicherheit'
+  },
+  {
+    id: 7,
+    question: 'Wann im Zyklus ist der optimale Zeitpunkt für die Untersuchung?',
+    answer: 'Bei Frauen vor den Wechseljahren sollte die Mamma-MRT idealerweise zwischen dem 7. und 14. Tag des Menstruationszyklus stattfinden (gezählt ab dem 1. Tag der Regelblutung). In dieser Phase ist der hormonelle Einfluss auf das Brustdrüsengewebe am geringsten, was die Beurteilbarkeit optimiert.',
     category: 'ablauf'
+  },
+  {
+    id: 8,
+    question: 'Kann eine Mamma-MRT mit Brustimplantaten durchgeführt werden?',
+    answer: 'Ja, die Mamma-MRT gilt als Goldstandard zur Beurteilung von Brustimplantaten. Sie kann sowohl das Drüsengewebe hinter dem Implantat ohne Schattenbildung beurteilen als auch die Hülle und Dichtigkeit des Silikonimplantats selbst auf feinste Risse (Rupturen) untersuchen.',
+    category: 'sicherheit'
+  },
+  {
+    id: 9,
+    question: 'Wie lange dauert der Termin im KMZ?',
+    answer: 'Die eigentliche Messung im MRT-Gerät dauert nur etwa 15 bis 20 Minuten. Insgesamt sollten Sie für das Vorgespräch, die Vorbereitung und die anschließende persönliche Befundbesprechung mit unserem Spezialistenteam ca. 45 bis 60 Minuten einplanen.',
+    category: 'ablauf'
+  },
+  {
+    id: 10,
+    question: 'Was unterscheidet das KMZ in Bezug auf Qualitätssicherung?',
+    answer: 'Das KMZ arbeitet nach den strengen Kriterien der QMRM GmbH (Kaiser MRT-Zertifizierung GmbH). Jede Aufnahme wird nach dem Doppelbefundungsprinzip von zwei zertifizierten Brustdiagnostiker:innen unabhängig befundet, und unsere Geräte entsprechen den höchsten 3-Tesla-Standards.',
+    category: 'indikationen'
   }
 ];
 
@@ -66,11 +91,11 @@ export const FaqPage: React.FC = () => {
         <div className="container">
           <div className="section-tag">
             <HelpCircle size={16} />
-            <span>Fragen & Antworten</span>
+            <span>Fragen &amp; Antworten</span>
           </div>
           <h1 className="page-title">Häufig gestellte Fragen (FAQ)</h1>
           <p className="page-description">
-            Hier finden Sie Antworten auf die wichtigsten Fragen rund um Mamma-MRT, Kostenübernahme, Ablauf und Sicherheit.
+            Hier finden Sie wissenschaftlich fundierte und verständliche Antworten auf alle wichtigen Fragen zu Mamma-MRT, Kostenübernahme, Ablauf und Diagnostiksicherheit.
           </p>
         </div>
       </section>
@@ -82,7 +107,7 @@ export const FaqPage: React.FC = () => {
             <Search size={18} className="search-icon" />
             <input
               type="text"
-              placeholder="Frage suchen..."
+              placeholder="Suchen Sie nach Stichworten wie 'Kosten', 'Zyklus', 'Implantat'..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="search-input"
@@ -94,31 +119,37 @@ export const FaqPage: React.FC = () => {
               className={`cat-btn ${category === 'all' ? 'active' : ''}`}
               onClick={() => setCategory('all')}
             >
-              Alle Fragen
+              Alle Fragen ({faqData.length})
+            </button>
+            <button
+              className={`cat-btn ${category === 'indikationen' ? 'active' : ''}`}
+              onClick={() => setCategory('indikationen')}
+            >
+              Vorteile &amp; Indikationen
             </button>
             <button
               className={`cat-btn ${category === 'kosten' ? 'active' : ''}`}
               onClick={() => setCategory('kosten')}
             >
-              Kosten & Kasse
+              Kosten &amp; TK-Vertrag
             </button>
             <button
               className={`cat-btn ${category === 'ablauf' ? 'active' : ''}`}
               onClick={() => setCategory('ablauf')}
             >
-              Ablauf & Dauer
+              Ablauf &amp; Zyklus
             </button>
             <button
               className={`cat-btn ${category === 'sicherheit' ? 'active' : ''}`}
               onClick={() => setCategory('sicherheit')}
             >
-              Sicherheit & Implantate
+              Sicherheit &amp; Implantate
             </button>
           </div>
         </div>
 
         {/* Accordion List */}
-        <div className="faq-accordion-list">
+        <div className="faq-accordion-list max-w-900 m-auto">
           {filteredFaqs.map((faq) => {
             const isOpen = openId === faq.id;
             return (
@@ -144,6 +175,25 @@ export const FaqPage: React.FC = () => {
               Keine passenden Antworten für Ihre Suchanfrage gefunden.
             </div>
           )}
+        </div>
+
+        {/* Contact Banner */}
+        <div className="faq-help-box mt-5">
+          <ShieldCheck size={28} className="text-teal" />
+          <div>
+            <h4>Sie haben weitere Fragen oder wünschen eine persönliche Beratung?</h4>
+            <p>Unser medizinisches Team berät Sie gerne individuell und prüft Ihre Kostenübernahme.</p>
+          </div>
+          <div className="faq-help-actions">
+            <Link to="/terminanfrage" className="btn btn-primary">
+              <Calendar size={16} />
+              <span>Terminanfrage starten</span>
+            </Link>
+            <a href="tel:02211234567" className="btn btn-outline">
+              <PhoneCall size={16} />
+              <span>0221 / 123 45 67</span>
+            </a>
+          </div>
         </div>
       </section>
     </div>

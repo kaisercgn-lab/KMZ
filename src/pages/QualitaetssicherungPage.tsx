@@ -8,7 +8,7 @@ export const QualitaetssicherungPage: React.FC = () => {
     {
       icon: <Activity size={32} />,
       title: '1. Apparative High-End Ausstattung',
-      desc: 'Einsatz hochmoderner 3 Tesla Mamma-MRT Systeme mit spezialisierten Mehrkanal-Brustspulen für maximale räumliche Auflösung unter 1 mm.'
+      desc: 'Einsatz hochmoderner 1,5 Tesla Mamma-MRT Systeme mit spezialisierten Mehrkanal-Brustspulen für maximale räumliche Auflösung unter 1 mm.'
     },
     {
       icon: <Award size={32} />,

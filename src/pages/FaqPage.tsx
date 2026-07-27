@@ -32,7 +32,7 @@ const faqData: FaqItem[] = [
   {
     id: 4,
     question: 'Ist die Mamma-MRT Untersuchung schmerzhaft oder eng?',
-    answer: 'Nein, die Untersuchung ist völlig schmerzfrei. Im Gegensatz zur Röntgen-Mammographie wird die Brust nicht gequetscht oder komprimiert. Sie liegen entspannt auf dem Bauch in einer abgepolsterten Spezial-Brustspule. Unsere modernen 3-Tesla-MRT-Geräte verfügen zudem über einen sehr breiten Tunnel mit angenehmer Belüftung. Auf Wunsch spielen wir Ihre Lieblingsmusik über Kopfhörer ein.',
+    answer: 'Nein, die Untersuchung ist völlig schmerzfrei. Im Gegensatz zur Röntgen-Mammographie wird die Brust nicht gequetscht oder komprimiert. Sie liegen entspannt auf dem Bauch in einer abgepolsterten Spezial-Brustspule. Unsere modernen 1,5-Tesla-MRT-Geräte verfügen zudem über einen sehr breiten Tunnel mit angenehmer Belüftung. Auf Wunsch spielen wir Ihre Lieblingsmusik über Kopfhörer ein.',
     category: 'ablauf'
   },
   {
@@ -68,7 +68,7 @@ const faqData: FaqItem[] = [
   {
     id: 10,
     question: 'Was unterscheidet das KMZ in Bezug auf Qualitätssicherung?',
-    answer: 'Das KMZ arbeitet nach den strengen Kriterien der QMRM GmbH (Kaiser MRT-Zertifizierung GmbH). Jede Aufnahme wird nach dem Doppelbefundungsprinzip von zwei zertifizierten Brustdiagnostiker:innen unabhängig befundet, und unsere Geräte entsprechen den höchsten 3-Tesla-Standards.',
+    answer: 'Das KMZ arbeitet nach den strengen Kriterien der QMRM GmbH (Kaiser MRT-Zertifizierung GmbH). Jede Aufnahme wird nach dem Doppelbefundungsprinzip von zwei zertifizierten Brustdiagnostiker:innen unabhängig befundet, und unsere Geräte entsprechen den höchsten 1,5-Tesla-Standards.',
     category: 'indikationen'
   }
 ];

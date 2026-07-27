@@ -247,7 +247,7 @@ export const MammaMrtPage: React.FC = () => {
             <div>
               <h3 className="m-0 font-serif font-bold text-teal-dark text-xl">QMRM Zertifizierung &amp; Höchste Qualitätsstandards</h3>
               <p className="m-0 text-body text-sm text-muted">
-                Unser Zentrum erfüllt die strengen Kriterien der QMRM GmbH für 4-Augen-Doppelbefundung &amp; 3T-Gerätestandards (inkl. 100% Kostenübernahme im TK-Selektivvertrag).
+                Unser Zentrum erfüllt die strengen Kriterien der QMRM GmbH für 4-Augen-Doppelbefundung &amp; 1,5T-Gerätestandards (inkl. 100% Kostenübernahme im TK-Selektivvertrag).
               </p>
             </div>
           </div>

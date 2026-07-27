@@ -84,7 +84,7 @@ export const UeberUnsPage: React.FC = () => {
                 Das Kaiser MR-Mammographie Zentrum fungiert als hochspezialisiertes Kompetenzzentrum für Mamma-MRT. Wir arbeiten Hand in Hand mit behandelnden Gynäkologinnen, Frauenkliniken und interdisziplinären Brustzentren zusammen.
               </p>
               <p className="text-body">
-                Unser Ziel ist die lückenlose Diagnostik: Von der Indikationsstellung über die hochauflösende 3T-MRT-Untersuchung bis hin zur direkten Befundbesprechung mit der Patientin und den zuweisenden Ärzt:innen.
+                Unser Ziel ist die lückenlose Diagnostik: Von der Indikationsstellung über die hochauflösende 1,5T-MRT-Untersuchung bis hin zur direkten Befundbesprechung mit der Patientin und den zuweisenden Ärzt:innen.
               </p>
             </div>
 
@@ -93,7 +93,7 @@ export const UeberUnsPage: React.FC = () => {
               <ul className="checklist">
                 <li>
                   <ShieldCheck size={20} className="text-teal" />
-                  <span>Spezialisierte High-End 3 Tesla Mamma-MRT Systeme</span>
+                  <span>Spezialisierte High-End 1,5 Tesla Mamma-MRT Systeme</span>
                 </li>
                 <li>
                   <ShieldCheck size={20} className="text-teal" />

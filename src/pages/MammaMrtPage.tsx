@@ -10,7 +10,9 @@ import {
   Sparkles,
   ZapOff,
   Eye,
-  Info
+  Info,
+  Award,
+  HelpCircle
 } from 'lucide-react';
 import './MammaMrtPage.css';
 
@@ -47,9 +49,9 @@ export const MammaMrtPage: React.FC = () => {
               <Layers size={16} />
               <span>Brustdichte nach ACR</span>
             </div>
-            <h2 className="section-title">Brustdichte-Kategorien & Ihr Einfluss</h2>
+            <h2 className="section-title">Brustdichte-Kategorien &amp; Ihr Einfluss</h2>
             <p className="section-subtitle">
-              Knapp 50% aller Frauen im Screening-Alter haben eine Brustdichte der Kategorie C oder D. Klicken Sie auf die Kategorien, um zu erfahren, warum Mamma-MRT hier essenziell ist.
+              Rund 45% aller Frauen im Screening-Alter haben eine Brustdichte der Kategorie C oder D. Klicken Sie auf die Kategorien, um zu erfahren, warum Mamma-MRT hier essenziell ist.
             </p>
           </div>
 
@@ -117,7 +119,7 @@ export const MammaMrtPage: React.FC = () => {
 
               {selectedDensity === 'D' && (
                 <div className="density-info animate-fade-in">
-                  <span className="badge badge-rose mb-2">Höchste Dichte & Risiko</span>
+                  <span className="badge badge-rose mb-2">Höchste Dichte &amp; Risiko</span>
                   <h3>Kategorie ACR D – Extrem dichtes Drüsengewebe (ca. 10% der Frauen)</h3>
                   <p>
                     Bei extrem dichter Brust ist das Mammographie-Röntgenbild oft schwer beurteilbar (Maskierungseffekt). Frauen mit ACR D haben zudem ein 4–6-fach erhöhtes Krebsrisiko. <strong>Hier ist die Mamma-MRT das mit Abstand zuverlässigste Verfahren zur Früherkennung.</strong>
@@ -146,7 +148,7 @@ export const MammaMrtPage: React.FC = () => {
           <div className="grid-4 process-grid">
             <div className="card process-card">
               <div className="process-number">1</div>
-              <h3>Vorbereitung & Anamnese</h3>
+              <h3>Vorbereitung &amp; Anamnese</h3>
               <p>
                 Vorab klären wir Kontraindikationen (z. B. Herzschrittmacher). Bei prämenopausalen Frauen liegt der optimale Untersuchungszeitraum zwischen dem 7. und 14. Zyklustag.
               </p>
@@ -170,7 +172,7 @@ export const MammaMrtPage: React.FC = () => {
 
             <div className="card process-card">
               <div className="process-number">4</div>
-              <h3>Auswertung & Befund</h3>
+              <h3>Auswertung &amp; Befund</h3>
               <p>
                 Prof. Dr. med. Clemens Kaiser und unser Spezialistenteam werten die Schnittbilder sorgfältig aus und besprechen das Ergebnis persönlich mit Ihnen.
               </p>
@@ -207,7 +209,7 @@ export const MammaMrtPage: React.FC = () => {
                 <li>
                   <ShieldCheck className="benefit-icon" size={22} />
                   <div>
-                    <strong>Sicherheit bei Brustimplantaten & Narben</strong>
+                    <strong>Sicherheit bei Brustimplantaten &amp; Narben</strong>
                     <p>Perfekt geeignet zur Beurteilung des Gewebes um Implantate oder nach Voroperationen.</p>
                   </div>
                 </li>
@@ -237,20 +239,41 @@ export const MammaMrtPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 4: FAQ Link Callout */}
+      {/* Section 4: QMRM & Qualitätssicherung Banner */}
       <section className="container mb-4">
-        <div className="card bg-stone p-4 border border-line rounded-xl flex align-center justify-between gap-md flex-wrap">
-          <div>
-            <h3 className="m-0 font-serif font-bold text-teal-dark text-xl">Haben Sie Fragen zur Mamma-MRT Untersuchung?</h3>
-            <p className="m-0 text-body text-sm text-muted">Antworten zu Zykluszeitpunkt, Kontrastmittel, Implantaten &amp; Kostenübernahme finden Sie in unseren FAQs.</p>
+        <div className="card bg-teal-50 border border-teal-100 p-4 rounded-xl flex align-center justify-between gap-md flex-wrap shadow-sm">
+          <div className="flex align-center gap-md">
+            <Award size={32} className="text-teal flex-shrink-0" />
+            <div>
+              <h3 className="m-0 font-serif font-bold text-teal-dark text-xl">QMRM Zertifizierung &amp; Höchste Qualitätsstandards</h3>
+              <p className="m-0 text-body text-sm text-muted">
+                Unser Zentrum erfüllt die strengen Kriterien der QMRM GmbH für 4-Augen-Doppelbefundung &amp; 3T-Gerätestandards (inkl. 100% Kostenübernahme im TK-Selektivvertrag).
+              </p>
+            </div>
           </div>
-          <Link to="/faqs" className="btn btn-outline">
-            <span>Alle Mamma-MRT FAQs lesen &rarr;</span>
+          <Link to="/qualitaetssicherung" className="btn btn-teal">
+            <span>Zur Qualitätssicherung &amp; QMRM &rarr;</span>
           </Link>
         </div>
       </section>
 
-      {/* Section 5: CTA Banner */}
+      {/* Section 5: FAQ Banner */}
+      <section className="container mb-4">
+        <div className="card bg-stone p-4 border border-line rounded-xl flex align-center justify-between gap-md flex-wrap">
+          <div className="flex align-center gap-md">
+            <HelpCircle size={28} className="text-teal flex-shrink-0" />
+            <div>
+              <h3 className="m-0 font-serif font-bold text-teal-dark text-xl">Haben Sie Fragen zur Mamma-MRT?</h3>
+              <p className="m-0 text-body text-sm text-muted">Antworten zu Zykluszeitpunkt, Überweisung, Kontrastmittel &amp; Implantaten finden Sie in unseren FAQs.</p>
+            </div>
+          </div>
+          <Link to="/faqs" className="btn btn-outline">
+            <span>Zu allen FAQs &rarr;</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Section 6: Final Single Clean CTA Banner */}
       <section className="container mb-5">
         <div className="card patient-cta-card">
           <div>

@@ -112,7 +112,7 @@ export const PatientinnenPage: React.FC = () => {
                   </div>
                   <h3>Warum die Tumorentdeckung unter 1 cm lebensrettend ist</h3>
                   <p>
-                    Wird ein Tumor entdeckt, solange er kleiner als 1 cm ist, liegt die <strong>12-Jahres-Überlebensrate bei über 90 %</strong>. In diesem frühen Stadium haben sich meist noch keine Tochterabsiedlungen (Metastasen) gebildet, weshalb Patientinnen oft eine belastende Chemotherapie erspart werden kann.
+                    Wird ein Tumor entdeckt, solange er kleiner als 1 cm ist, liegt die <strong>Heilungsschance bei über 98 %</strong>. In diesem frühen Stadium haben sich meist noch keine Tochterabsiedlungen (Metastasen) gebildet, weshalb Patientinnen oft eine belastende Chemotherapie erspart werden kann.
                   </p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export const PatientinnenPage: React.FC = () => {
             <div className="text-center mb-5 max-w-700 m-auto">
               <h2 className="section-title">Brustgewebedichte (ACR Categories)</h2>
               <p className="text-body">
-                Die Brustdichte beschreibt das Verhältnis von Fettgewebe zu Drüsen- und Bindegewebe. Fast 50 % aller Frauen im screening-relevanten Alter haben dichtes Brustgewebe (ACR C oder D).
+                Die Brustdichte beschreibt das Verhältnis von Fettgewebe zu Drüsen- und Bindegewebe. Rund <strong>45 % aller Frauen</strong> im screening-relevanten Alter haben dichtes Drüsengewebe der Kategorien <strong>ACR C oder D</strong>.
               </p>
             </div>
 

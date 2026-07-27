@@ -78,12 +78,12 @@ export const HomePage: React.FC = () => {
               </p>
               <div className="widget-stats">
                 <div className="stat-box">
-                  <span className="stat-value">&gt; 90%</span>
+                  <span className="stat-value">&gt; 98%</span>
                   <span className="stat-label">Heilungschance bei Detektion &lt; 1 cm</span>
                 </div>
                 <div className="stat-box">
-                  <span className="stat-value">50%</span>
-                  <span className="stat-label">aller Frauen haben dichtes Drüsengewebe</span>
+                  <span className="stat-value">45%</span>
+                  <span className="stat-label">aller Frauen haben dichtes Drüsengewebe (ACR C/D)</span>
                 </div>
               </div>
             </div>

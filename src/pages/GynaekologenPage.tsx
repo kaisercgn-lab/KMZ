@@ -11,7 +11,8 @@ import {
   ExternalLink,
   Award,
   BookOpen,
-  CheckCircle2
+  CheckCircle2,
+  Shield
 } from 'lucide-react';
 import './GynaekologenPage.css';
 
@@ -116,6 +117,64 @@ export const GynaekologenPage: React.FC = () => {
                     <span>aerzte@kmz-brustvorsorge.de</span>
                   </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TK Special Contract / IGV Details Section */}
+      <section className="section-padding bg-white">
+        <div className="container">
+          <div className="card tk-contract-card p-4 border border-teal-100 rounded-xl bg-teal-50">
+            <div className="flex align-center justify-between gap-md flex-wrap mb-4 pb-3 border-b border-teal-100">
+              <div className="flex align-center gap-md">
+                <div className="contract-badge-icon text-teal">
+                  <Shield size={32} />
+                </div>
+                <div>
+                  <span className="badge badge-teal mb-1">Besondere Versorgung (§ 140a SGB V)</span>
+                  <h2 className="section-title m-0">Selektivvertrag mit der Techniker Krankenkasse (TK)</h2>
+                </div>
+              </div>
+              <a
+                href="https://www.tk.de/techniker/versicherung/tk-leistungen/weitere-leistungen/igv-vertraege/ambulante-magnetresonanz-mammografie-mrm-mannheim-2147266"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-teal"
+              >
+                <ExternalLink size={16} />
+                <span>Offizielle TK-Vertragsseite aufrufen &rarr;</span>
+              </a>
+            </div>
+
+            <p className="text-body mb-4">
+              Über den <strong>Vertrag zur Integrierten/Besonderen Versorgung (IGV-Vertrag)</strong> übernimmt die Techniker Krankenkasse für berechtigte Versorgungsfälle die vollen Kosten der ambulanten Mamma-MRT:
+            </p>
+
+            <div className="grid-3 gap-md">
+              <div className="card p-3 bg-white border border-line rounded-lg">
+                <h4 className="font-serif font-bold text-teal-dark mb-2">Einschlusskriterien</h4>
+                <ul className="checklist text-sm">
+                  <li><CheckCircle2 size={16} className="text-teal" /> <span>Frauen mit dichtem Brustgewebe (ACR C &amp; D)</span></li>
+                  <li><CheckCircle2 size={16} className="text-teal" /> <span>Familiär/genetisch erhöhtes Risiko</span></li>
+                  <li><CheckCircle2 size={16} className="text-teal" /> <span>Z. n. Brustkrebs / Rezidivprophylaxe</span></li>
+                  <li><CheckCircle2 size={16} className="text-teal" /> <span>Unklare Vorbefunde / Abklärungsbedarf</span></li>
+                </ul>
+              </div>
+
+              <div className="card p-3 bg-white border border-line rounded-lg">
+                <h4 className="font-serif font-bold text-teal-dark mb-2">Ablauf &amp; Verordnung für Praxen</h4>
+                <p className="text-sm text-body m-0">
+                  Für Ihre Patientinnen genügt eine einfache fachärztliche Zuweisung bzw. Empfehlung. Die Abrechnung erfolgt unbürokratisch über die Teilnahmeerklärung direkt mit der Kasse (keine Vorkasse für TK-Versicherte).
+                </p>
+              </div>
+
+              <div className="card p-3 bg-white border border-line rounded-lg">
+                <h4 className="font-serif font-bold text-teal-dark mb-2">Qualitätsgarantie des KMZ</h4>
+                <p className="text-sm text-body m-0">
+                  Der Vertrag garantiert höchste diagnostische Standards: Volle Sequenzanalyse (T2, DWI, DCE) auf 1,5T High-End Systemen und 100 % 4-Augen-Doppelbefundung nach QMRM.
+                </p>
               </div>
             </div>
           </div>

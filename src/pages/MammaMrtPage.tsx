@@ -300,7 +300,7 @@ export const MammaMrtPage: React.FC = () => {
       </section>
 
       {/* Section 6: FAQ Banner */}
-      <section className="container mb-4">
+      <section className="container mb-5">
         <div className="card bg-stone p-4 border border-line rounded-xl flex align-center justify-between gap-md flex-wrap">
           <div className="flex align-center gap-md">
             <HelpCircle size={28} className="text-teal flex-shrink-0" />
@@ -311,20 +311,6 @@ export const MammaMrtPage: React.FC = () => {
           </div>
           <Link to="/faqs" className="btn btn-outline">
             <span>Zu allen FAQs &rarr;</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* Section 7: Final Single Clean CTA Banner */}
-      <section className="container mb-5">
-        <div className="card patient-cta-card">
-          <div>
-            <h2>Vereinbaren Sie Ihren Termin zur Mamma-MRT</h2>
-            <p>Schaffen Sie Klarheit und Sicherheit für Ihre persönliche Brustkrebsvorsorge.</p>
-          </div>
-          <Link to="/terminanfrage" className="btn btn-primary">
-            <Calendar size={18} />
-            <span>Jetzt Terminanfrage stellen</span>
           </Link>
         </div>
       </section>

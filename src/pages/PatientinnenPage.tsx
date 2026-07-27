@@ -352,20 +352,6 @@ export const PatientinnenPage: React.FC = () => {
           </Link>
         </div>
       </section>
-
-      {/* Bottom CTA Box */}
-      <section className="container mb-5">
-        <div className="card patient-cta-card">
-          <div>
-            <h2>Möchten Sie Ihre Vorsorge in beste Hände legen?</h2>
-            <p>Fragen Sie Ihren Wunschtermin ganz einfach und unverbindlich online an.</p>
-          </div>
-          <Link to="/terminanfrage" className="btn btn-primary">
-            <Calendar size={18} />
-            <span>Vorsorgetermin anfragen</span>
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };

@@ -22,30 +22,6 @@ import './PatientinnenPage.css';
 
 export const PatientinnenPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'fakten' | 'brustdichte' | 'risiko' | 'vergleich'>('fakten');
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
-  const patientFaqs = [
-    {
-      q: "Brauche ich eine Überweisung für die Mamma-MRT?",
-      a: "Für gesetzlich versicherte Patientinnen (z. B. im Rahmen des TK-Selektivvertrags) ist eine Zuweisung/Empfehlung durch Ihre Gynäkologin oder Ihren Gynäkologen erforderlich. Privatversicherte und Selbstzahlerinnen können den Termin direkt buchen."
-    },
-    {
-      q: "Wann ist der beste Zeitpunkt im Monat für die Untersuchung?",
-      a: "Bei Frauen im gebärfähigen Alter sollte die Untersuchung vorzugsweise zwischen dem 7. und 14. Tag des Menstruationszyklus stattfinden, da das Brustgewebe in dieser Phase den geringsten hormonellen Hintergrundkontrast aufweist."
-    },
-    {
-      q: "Ist das Kontrastmittel bei der Mamma-MRT sicher?",
-      a: "Ja. Das verwendete Gadolinium-haltige Kontrastmittel wird seit Jahrzehnten weltweit eingesetzt und zeichnet sich durch eine sehr hohe Verträglichkeit aus. Es wird nach der Untersuchung schnell über die Nieren ausgeschieden."
-    },
-    {
-      q: "Ist die Untersuchung schmerzhaft oder eng?",
-      a: "Nein. Die Untersuchung erfolgt in bequemer Bauchlage und ist völlig schmerzfrei. Es findet kein schmerzhaftes Zusammenpressen der Brust wie bei der Röntgen-Mammographie statt. Zudem sorgen moderne 3-Tesla-Geräte mit breitem Tunnel und angenehmer Beleuchtung für maximalen Komfort."
-    }
-  ];
 
   return (
     <div className="patientinnen-page">
@@ -364,29 +340,16 @@ export const PatientinnenPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Patient FAQ Accordion Section */}
+      {/* Clean FAQ Link Banner */}
       <section className="container mb-5">
-        <div className="max-w-800 m-auto">
-          <h2 className="section-title text-center mb-4">Häufige Fragen von Patientinnen</h2>
-          <div className="faq-accordion-list">
-            {patientFaqs.map((faq, idx) => (
-              <div
-                key={idx}
-                className={`faq-accordion-item ${openFaq === idx ? 'open' : ''}`}
-                onClick={() => toggleFaq(idx)}
-              >
-                <div className="faq-accordion-header">
-                  <h4 className="m-0 font-bold text-teal-dark">{faq.q}</h4>
-                  <ChevronDown size={20} className="faq-arrow" />
-                </div>
-                {openFaq === idx && (
-                  <div className="faq-accordion-body animate-fade-in">
-                    <p className="m-0 text-body text-sm">{faq.a}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+        <div className="card bg-stone p-4 border border-line rounded-xl flex align-center justify-between gap-md flex-wrap">
+          <div>
+            <h3 className="m-0 font-serif font-bold text-teal-dark text-xl">Häufig gestellte Fragen von Patientinnen</h3>
+            <p className="m-0 text-body text-sm text-muted">Antworten zu Zykluszeitpunkt, Überweisung, Kontrastmittel &amp; Ablauf finden Sie in unseren zentralen FAQs.</p>
           </div>
+          <Link to="/faqs" className="btn btn-outline">
+            <span>Zu allen FAQs &rarr;</span>
+          </Link>
         </div>
       </section>
 
